@@ -5,35 +5,35 @@ var autoEvaluacion = function() {
             var names = {};
             var maximo = {};
         
-            val['gobierno'] = 0;
-            val['ecosistema'] = 0;
-            val['innovacion'] = 0;
-            val['gestion'] = 0;
-            val['rrhh'] = 0;
-            val['gestioneconomica'] = 0;
-            val['mejoraprocesos'] = 0;
-            val['gestionambiental'] = 0;
-            val['desarrollocomunidades'] = 0;
+            val['gobierno-cooperativo'] = 0;
+            val['ecosistema-cooperativo'] = 0;
+            val['estrategia-e-innovacion'] = 0;
+            val['gestion-del-productor-comercial'] = 0;
+            val['recursos-humanos'] = 0;
+            val['gestion-economica-financiera'] = 0;
+            val['mejora-de-procesos'] = 0;
+            val['gestion-ambiental'] = 0;
+            val['desarrollo-de-comunidades'] = 0;
         
-            names['gobierno'] = 'Gobierno Cooperativo';
-            names['ecosistema'] = 'Ecosistema Cooperativo';
-            names['innovacion'] = 'Estrategia e innovación';
-            names['gestion'] = 'Gestión del productor/comercial';
-            names['rrhh'] = 'Recursos Humanos';
-            names['gestioneconomica'] = 'Gestión económica-financiera';
-            names['mejoraprocesos'] = 'Mejora de procesos';
-            names['gestionambiental'] = 'Gestión ambiental';
-            names['desarrollocomunidades'] = 'Desarrollo de comunidades';
+            names['gobierno-cooperativo'] = 'Gobierno Cooperativo';
+            names['ecosistema-cooperativo'] = 'Ecosistema Cooperativo';
+            names['estrategia-e-innovacion'] = 'Estrategia e innovación';
+            names['gestion-del-productor-comercial'] = 'Gestión del productor/comercial';
+            names['recursos-humanos'] = 'Recursos Humanos';
+            names['gestion-economica-financiera'] = 'Gestión económica-financiera';
+            names['mejora-de-procesos'] = 'Mejora de procesos';
+            names['gestion-ambiental'] = 'Gestión ambiental';
+            names['desarrollo-de-comunidades'] = 'Desarrollo de comunidades';
 
-            maximo['gobierno'] = 70;
-            maximo['ecosistema'] = 60;
-            maximo['innovacion'] = 80;
-            maximo['gestion'] = 168;
-            maximo['rrhh'] = 112;
-            maximo['gestioneconomica'] = 140;
-            maximo['mejoraprocesos'] = 112;
-            maximo['gestionambiental'] = 112;
-            maximo['desarrollocomunidades'] = 112;
+            maximo['gobierno-cooperativo'] = 70;
+            maximo['ecosistema-cooperativo'] = 60;
+            maximo['estrategia-e-innovacion'] = 80;
+            maximo['gestion-del-productor-comercial'] = 168;
+            maximo['recursos-humanos'] = 112;
+            maximo['gestion-economica-financiera'] = 140;
+            maximo['mejora-de-procesos'] = 112;
+            maximo['gestion-ambiental'] = 112;
+            maximo['desarrollo-de-comunidades'] = 112;
         
             
         
