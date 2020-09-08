@@ -184,12 +184,12 @@ function my_cursos_list_cb() {
     if ( ! wp_verify_nonce( $nonce, 'my-ajax-nonce' ) ) {
         die ( 'Busted!');
     }
-
+	$cats = $_POST['cats'];
     $args = array(
 		'post_type' => 'post',
 		'status' => 'publish',
 		// Esto debería ser dinamico. Traer las categorias con menor puntaje.
-        'category_name' => 'gobierno-cooperativo',
+        'category_name' => $cats,
     );
     $query = new WP_Query( $args );
 

@@ -11,7 +11,7 @@
 
 <?php 
     $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-    $categories = get_categories();
+    $categories = get_the_category();
 
     echo '<li>';
     echo '<div class="uk-cover-container card-image-wrapper">';

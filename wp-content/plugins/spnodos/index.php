@@ -36,7 +36,7 @@ if ( function_exists( 'register_block_style' ) ) {
     add_action( 'init', 'block_styles_register_block_styles' );
 }
 
-function get_ajax_posts() {
+/*function get_ajax_posts() {
     // Query Arguments
     $args = array(
         'post_type' => array('post'),
@@ -58,4 +58,4 @@ function get_ajax_posts() {
 
 // Fire AJAX action for both logged in and non-logged in users
 add_action('wp_ajax_get_ajax_posts', 'get_ajax_posts');
-add_action('wp_ajax_nopriv_get_ajax_posts', 'get_ajax_posts');
+add_action('wp_ajax_nopriv_get_ajax_posts', 'get_ajax_posts');*/
