@@ -147,6 +147,7 @@ var autoEvaluacion = function() {
             cats: val,
           },
           success: function(results){
+              $('#cursos-sugeridos').fadeIn(200);
               $('#cursos-sugeridos').html(results);
           }
         });

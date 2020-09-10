@@ -35,718 +35,703 @@ get_header();
 
         <!--PAGE-->
         <!--CUESTIONARIO-->
-        <section id="test" class="uk-container uk-container-small">
-            <div class="uk-text-light">
-                <div class="uk-section uk-container uk-container-large uk-padding-large survey" id="cuestionario">
-                    <!--Progreso-->
-                    <div class="uk-text-right porcentaje"><span>0</span>%</div>
-                    <progress id="js-progressbar" class="uk-progress" value="0" max="100"></progress>
-                    <div id="progress">
-                      <p class="text-center small text-gray progress-number"><span class="actual"></span> de <span class="maximo"></span></p>
+        <section id="test" class="uk-container uk-container-small uk-text-light survey">
+            <div class="uk-section uk-container uk-container-large uk-padding-large" id="cuestionario">
+                <!--Progreso-->
+                <div class="uk-text-right porcentaje"><span>0</span>%</div>
+                <progress id="js-progressbar" class="uk-progress" value="0" max="100"></progress>
+                <div id="progress">
+                    <p class="text-center small text-gray progress-number"><span class="actual"></span> de <span class="maximo"></span></p>
+                </div>
+
+                <!--Preguntas-->
+                <form method='POST' action='result.html' id='questions'>
+
+                    <!--1. Gobierno cooperativo (GC)-->
+                    <div class="question pt-5" id="question1">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-01-gobierno.png"><span class="azul">Gobierno cooperativo (GC)</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                            <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Los miembros del GC y sus responsabilidades están definidas en un <strong>Reglamento Interno</strong> complementario al Estatuto</div>
+                            </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                            <label for="101"><input class="uk-radio" type="radio" name="gobierno-cooperativo__1" value="6.25" id="101">  No lo cumplimos</label>
+                            <label for="102"><input class="uk-radio" type="radio" name="gobierno-cooperativo__1" value="12.5" id="102">  Cumplimos parcialmente</label>
+                            <label for="103"><input class="uk-radio" type="radio" name="gobierno-cooperativo__1" value="18.75" id="103">  Cumplimos mayoritariamente</label>
+                            <label for="104"><input class="uk-radio" type="radio" name="gobierno-cooperativo__1" value="25" id="104">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
                     </div>
 
-                    <!--Preguntas-->
-                    <form method='POST' action='result.html' id='questions'>
-
-                        <!--1. Gobierno cooperativo (GC)-->
-                        <div class="question pt-5" id="question1">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-01-gobierno.png"><span class="azul">Gobierno cooperativo (GC)</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                    <div class="question pt-5" id="question2">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-01-gobierno.png"><span class="azul">Gobierno cooperativo (GC)</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
                                 <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Los miembros del GC y sus responsabilidades están definidas en un <strong>Reglamento Interno</strong> complementario al Estatuto</div>
-                                </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                <label for="101"><input class="uk-radio" type="radio" name="gobierno-cooperativo__1" value="6.25" id="101">  No lo cumplimos</label>
-                                <label for="102"><input class="uk-radio" type="radio" name="gobierno-cooperativo__1" value="12.5" id="102">  Cumplimos parcialmente</label>
-                                <label for="103"><input class="uk-radio" type="radio" name="gobierno-cooperativo__1" value="18.75" id="103">  Cumplimos mayoritariamente</label>
-                                <label for="104"><input class="uk-radio" type="radio" name="gobierno-cooperativo__1" value="25" id="104">  Cumplimos totalmente</label>
+                                    <div>Cada miembro del GC cuenta con una <strong>Inducción Formal y Capacitación</strong> acorde a rol</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question2">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-01-gobierno.png"><span class="azul">Gobierno cooperativo (GC)</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                        <div>Cada miembro del GC cuenta con una <strong>Inducción Formal y Capacitación</strong> acorde a rol</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="111"><input class="uk-radio" type="radio" name="gobierno-cooperativo__2" value="6.25" id="111">  No lo cumplimos</label>
-                                    <label for="112"><input class="uk-radio" type="radio" name="gobierno-cooperativo__2" value="12.5" id="112">  Cumplimos parcialmente</label>
-                                    <label for="113"><input class="uk-radio" type="radio" name="gobierno-cooperativo__2" value="18.75" id="113">  Cumplimos mayoritariamente</label>
-                                    <label for="114"><input class="uk-radio" type="radio" name="gobierno-cooperativo__2" value="25" id="114">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="111"><input class="uk-radio" type="radio" name="gobierno-cooperativo__2" value="6.25" id="111">  No lo cumplimos</label>
+                                <label for="112"><input class="uk-radio" type="radio" name="gobierno-cooperativo__2" value="12.5" id="112">  Cumplimos parcialmente</label>
+                                <label for="113"><input class="uk-radio" type="radio" name="gobierno-cooperativo__2" value="18.75" id="113">  Cumplimos mayoritariamente</label>
+                                <label for="114"><input class="uk-radio" type="radio" name="gobierno-cooperativo__2" value="25" id="114">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="question pt-5" id="question3">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-01-gobierno.png"><span class="azul">Gobierno cooperativo (GC)</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>El GC asegura la <strong>Independencia de los Controles</strong> y la realización de auditorías externas  </div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="121"><input class="uk-radio" type="radio" name="gobierno-cooperativo__3" value="6.25" id="121">  No lo cumplimos</label>
-                                    <label for="122"><input class="uk-radio" type="radio" name="gobierno-cooperativo__3" value="12.5" id="122">  Cumplimos parcialmente</label>
-                                    <label for="123"><input class="uk-radio" type="radio" name="gobierno-cooperativo__3" value="18.75" id="123">  Cumplimos mayoritariamente</label>
-                                    <label for="124"><input class="uk-radio" type="radio" name="gobierno-cooperativo__3" value="25" id="124">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question4">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-01-gobierno.png"><span class="azul">Gobierno cooperativo (GC)</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Las autoridades del GC establecen un <strong>Código de Ética</strong> que obliga a exponer conflictos de interés, a presentar denuncias y ponderar faltas</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="131"><input class="uk-radio" type="radio" name="gobierno-cooperativo__4" value="6.25" id="131">  No lo cumplimos</label>
-                                    <label for="132"><input class="uk-radio" type="radio" name="gobierno-cooperativo__4" value="12.5" id="132">  Cumplimos parcialmente</label>
-                                    <label for="133"><input class="uk-radio" type="radio" name="gobierno-cooperativo__4" value="18.75" id="133">  Cumplimos mayoritariamente</label>
-                                    <label for="134"><input class="uk-radio" type="radio" name="gobierno-cooperativo__4" value="25" id="134">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--2. Ecosistema cooperativo-->
-                        <div class="question pt-5" id="question5">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-02-ecosistema.png"><span class="azul">Ecosistema cooperativo</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Se realizan proyectos compartidos con otras Cooperativas (comerciales, de inversión, educativos, sociales)</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="201"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="8.333" id="201">  No lo cumplimos</label>
-                                    <label for="202"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="16.666" id="202">  Cumplimos parcialmente</label>
-                                    <label for="203"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="25" id="203">  Cumplimos mayoritariamente</label>
-                                    <label for="204"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="34.333" id="204">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question6">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-02-ecosistema.png"><span class="azul">Ecosistema cooperativo</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>El GC <strong>designa representantes entre sus consejeros y funcionarios para actuar en otros ámbitos</strong>, los cuales son seleccionados y formados según perfiles especificos</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="211"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="8.333" id="211">  No lo cumplimos</label>
-                                    <label for="212"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="16.666" id="212">  Cumplimos parcialmente</label>
-                                    <label for="213"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="25" id="213">  Cumplimos mayoritariamente</label>
-                                    <label for="214"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="33.333" id="214">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question7">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-02-ecosistema.png"><span class="azul">Ecosistema cooperativo</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Verifica y da cumplimiento a los <strong>requisitos estatutarios de las Entidades</strong> a las cuales pertenece, compartiendo regularmente su situación patrimonial, desempeño comercial y proyección financiera</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="221"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="8.3333" id="221">  No lo cumplimos</label>
-                                    <label for="222"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="16.666" id="222">  Cumplimos parcialmente</label>
-                                    <label for="223"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="25" id="223">  Cumplimos mayoritariamente</label>
-                                    <label for="224"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="33.333" id="224">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--3. Estrategia e innovación-->
-                        <div class="question pt-5" id="question8">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-03-strategia-e-innovacion.png"><span class="azul">Estrategia e innovación</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Establece <strong>Objetivos Estratégicos</strong> para el mediano y largo plazo, considerando a los distintos grupos de interés</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="301"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="6.25" id="301">  No lo cumplimos</label>
-                                    <label for="302"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="12.5" id="302">  Cumplimos parcialmente</label>
-                                    <label for="303"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="18.75" id="303">  Cumplimos mayoritariamente</label>
-                                    <label for="304"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="25" id="304">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question9">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-03-strategia-e-innovacion.png"><span class="azul">Estrategia e innovación</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>El <strong>Plan Estratégico de la Cooperativa</strong> es comunicado y conocido por toda la organización</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="311"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="6.25" id="311">  No lo cumplimos</label>
-                                    <label for="312"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="12.5" id="312">  Cumplimos parcialmente</label>
-                                    <label for="313"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="18.75" id="313">  Cumplimos mayoritariamente</label>
-                                    <label for="314"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="25" id="314">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question10">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-03-strategia-e-innovacion.png"><span class="azul">Estrategia e innovación</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>La evolución de objetivos e <strong>indicadores clave es monitoreada</strong> mendiante un tablero de control o herramienta similar</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="321"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="6.25" id="321">  No lo cumplimos</label>
-                                    <label for="322"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="12.5" id="322">  Cumplimos parcialmente</label>
-                                    <label for="323"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="18.75" id="323">  Cumplimos mayoritariamente</label>
-                                    <label for="324"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="25" id="324">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question11">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-03-strategia-e-innovacion.png"><span class="azul">Estrategia e innovación</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Gestiona estratégicamente las <strong>oportunidades/proyectos de innovación</strong>, evalúa riesgos e impactos y promueve la experimentación</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="331"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="6.25" id="331">  No lo cumplimos</label>
-                                    <label for="332"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="12.5" id="332">  Cumplimos parcialmente</label>
-                                    <label for="333"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="18.75" id="333">  Cumplimos mayoritariamente</label>
-                                    <label for="334"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="25" id="334">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--4. Gestión del productor comercial-->
-                        <div class="question pt-5" id="question12">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Tiene definida una <strong>segmentación de asociados/clientes</strong> según necesidades y preferencias</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="401"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__1" value="4.1666" id="401">  No lo cumplimos</label>
-                                    <label for="402"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__1" value="8.333" id="402">  Cumplimos parcialmente</label>
-                                    <label for="403"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__1" value="12.5" id="403">  Cumplimos mayoritariamente</label>
-                                    <label for="404"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__1" value="16.666" id="404">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question13">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Genera <strong>planes de acción para mejorar</strong> la satisfacción del productor/cliente.</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="411"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__2" value="4.1666" id="411">  No lo cumplimos</label>
-                                    <label for="412"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__2" value="8.333" id="412">  Cumplimos parcialmente</label>
-                                    <label for="413"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__2" value="12.5" id="413">  Cumplimos mayoritariamente</label>
-                                    <label for="414"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__2" value="16.666" id="414">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question14">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Conoce la <strong>Consecuencia de los asociados/clientes</strong> por cada negocio, da reconocimientos y tiene herramientas para fidelizar</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="421"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__3" value="4.1666" id="421">  No lo cumplimos</label>
-                                    <label for="422"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__3" value="8.333" id="422">  Cumplimos parcialmente</label>
-                                    <label for="423"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__3" value="12.5" id="423">  Cumplimos mayoritariamente</label>
-                                    <label for="424"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__3" value="16.666" id="424">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question15">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Tiene una mesa de negocios con participación de todas las secciones, para <strong>potenciar la función comercial</strong> de la Cooperativa</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="431"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__4" value="4.1666" id="431">  No lo cumplimos</label>
-                                    <label for="432"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__4" value="8.333" id="432">  Cumplimos parcialmente</label>
-                                    <label for="433"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__4" value="12.5" id="433">  Cumplimos mayoritariamente</label>
-                                    <label for="434"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__4" value="16.666" id="434">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question16">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>El desempeño empresarial de los productores, su solvencia patrimonial  y sustentabilidad se miden, tienen objetivos y mejoró en los ultimos 3 años</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="441"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="4.1666" id="441">  No lo cumplimos</label>
-                                    <label for="442"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="8.333" id="442">  Cumplimos parcialmente</label>
-                                    <label for="443"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="12.5" id="443">  Cumplimos mayoritariamente</label>
-                                    <label for="444"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="16.666" id="444">  Cumplimos totalmente</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="question pt-5" id="question17">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                    <div class="question pt-5" id="question3">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-01-gobierno.png"><span class="azul">Gobierno cooperativo (GC)</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
                                 <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>La Satisfacción y Consecuencia de Asociados y Clientes  se mide, tiene objetivos y mejoró en los últimos 3 años</div>
-                                </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="451"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="4.1666" id="451">  No lo cumplimos</label>
-                                    <label for="452"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="8.333" id="452">  Cumplimos parcialmente</label>
-                                    <label for="453"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="12.5" id="453">  Cumplimos mayoritariamente</label>
-                                    <label for="454"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="16.666" id="454">  Cumplimos totalmente</label>
+                                <div>El GC asegura la <strong>Independencia de los Controles</strong> y la realización de auditorías externas  </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!--5. Recursos humanos-->
-                        <div class="question pt-5" id="question18">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-05-recursos-humanos.png"><span class="azul">Recursos Humanos</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Las incorporaciones se realizan de acuerdo a un <strong>proceso de selección definido</strong>,  según las descripciones y perfiles establecidos.</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="501"><input class="uk-radio" type="radio" name="recursos-humanos__1" value="6.25" id="501">  No lo cumplimos</label>
-                                    <label for="502"><input class="uk-radio" type="radio" name="recursos-humanos__1" value="12.5" id="502">  Cumplimos parcialmente</label>
-                                    <label for="503"><input class="uk-radio" type="radio" name="recursos-humanos__1" value="18.75" id="503">  Cumplimos mayoritariamente</label>
-                                    <label for="504"><input class="uk-radio" type="radio" name="recursos-humanos__1" value="25" id="504">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="121"><input class="uk-radio" type="radio" name="gobierno-cooperativo__3" value="6.25" id="121">  No lo cumplimos</label>
+                                <label for="122"><input class="uk-radio" type="radio" name="gobierno-cooperativo__3" value="12.5" id="122">  Cumplimos parcialmente</label>
+                                <label for="123"><input class="uk-radio" type="radio" name="gobierno-cooperativo__3" value="18.75" id="123">  Cumplimos mayoritariamente</label>
+                                <label for="124"><input class="uk-radio" type="radio" name="gobierno-cooperativo__3" value="25" id="124">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="question pt-5" id="question19">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-05-recursos-humanos.png"><span class="azul">Recursos Humanos</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Se identifican los puestos críticos y se generan los cuadros para eventuales reemplazo de los mismos.</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="511"><input class="uk-radio" type="radio" name="recursos-humanos__2" value="6.25" id="511">  No lo cumplimos</label>
-                                    <label for="512"><input class="uk-radio" type="radio" name="recursos-humanos__2" value="12.5" id="512">  Cumplimos parcialmente</label>
-                                    <label for="513"><input class="uk-radio" type="radio" name="recursos-humanos__2" value="18.75" id="513">  Cumplimos mayoritariamente</label>
-                                    <label for="514"><input class="uk-radio" type="radio" name="recursos-humanos__2" value="25" id="514">  Cumplimos totalmente</label>
+                    <div class="question pt-5" id="question4">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-01-gobierno.png"><span class="azul">Gobierno cooperativo (GC)</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Las autoridades del GC establecen un <strong>Código de Ética</strong> que obliga a exponer conflictos de interés, a presentar denuncias y ponderar faltas</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question20">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-05-recursos-humanos.png"><span class="azul">Recursos Humanos</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div><strong>Capacita a sus colaboradores</strong> de acuerdo a un plan que es monitoreado periódicamente </div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="521"><input class="uk-radio" type="radio" name="recursos-humanos__3" value="6.25" id="521">  No lo cumplimos</label>
-                                    <label for="522"><input class="uk-radio" type="radio" name="recursos-humanos__3" value="12.5" id="522">  Cumplimos parcialmente</label>
-                                    <label for="523"><input class="uk-radio" type="radio" name="recursos-humanos__3" value="18.75" id="523">  Cumplimos mayoritariamente</label>
-                                    <label for="524"><input class="uk-radio" type="radio" name="recursos-humanos__3" value="25" id="524">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="131"><input class="uk-radio" type="radio" name="gobierno-cooperativo__4" value="6.25" id="131">  No lo cumplimos</label>
+                                <label for="132"><input class="uk-radio" type="radio" name="gobierno-cooperativo__4" value="12.5" id="132">  Cumplimos parcialmente</label>
+                                <label for="133"><input class="uk-radio" type="radio" name="gobierno-cooperativo__4" value="18.75" id="133">  Cumplimos mayoritariamente</label>
+                                <label for="134"><input class="uk-radio" type="radio" name="gobierno-cooperativo__4" value="25" id="134">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="question pt-5" id="question21">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-05-recursos-humanos.png"><span class="azul">Recursos Humanos</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>La <strong>satisfacción de colaboradores</strong> se mide, tienen objetivos definidos y presentan una tendencia de mejora en los últimos 3 años</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="531"><input class="uk-radio" type="radio" name="recursos-humanos__4" value="6.25" id="531">  No lo cumplimos</label>
-                                    <label for="532"><input class="uk-radio" type="radio" name="recursos-humanos__4" value="12.5" id="532">  Cumplimos parcialmente</label>
-                                    <label for="533"><input class="uk-radio" type="radio" name="recursos-humanos__4" value="18.75" id="533">  Cumplimos mayoritariamente</label>
-                                    <label for="534"><input class="uk-radio" type="radio" name="recursos-humanos__4" value="25" id="534">  Cumplimos totalmente</label>
+                    <!--2. Ecosistema cooperativo-->
+                    <div class="question pt-5" id="question5">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-02-ecosistema.png"><span class="azul">Ecosistema cooperativo</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Se realizan proyectos compartidos con otras Cooperativas (comerciales, de inversión, educativos, sociales)</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!--6. Gestión económica-financiera-->
-                        <div class="question pt-5" id="question22">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Cuenta con un <strong>Presupuesto de ingresos y gastos</strong> con instancias de revisión y ajustes periódicos</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="601"><input class="uk-radio" type="radio" name="gestion-economica-financiera__1" value="5" id="601">  No lo cumplimos</label>
-                                    <label for="602"><input class="uk-radio" type="radio" name="gestion-economica-financiera__1" value="10" id="602">  Cumplimos parcialmente</label> 
-                                    <label for="603"><input class="uk-radio" type="radio" name="gestion-economica-financiera__1" value="15" id="603">  Cumplimos mayoritariamente</label>
-                                    <label for="604"><input class="uk-radio" type="radio" name="gestion-economica-financiera__1" value="20" id="604">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="201"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="8.333" id="201">  No lo cumplimos</label>
+                                <label for="202"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="16.666" id="202">  Cumplimos parcialmente</label>
+                                <label for="203"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="25" id="203">  Cumplimos mayoritariamente</label>
+                                <label for="204"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="34.333" id="204">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="question pt-5" id="question23">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Confecciona un <strong>Balance mensual</strong> de situación patrimonial y de resultados a fin de analizar la evolución del ejercicio económico.</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="611"><input class="uk-radio" type="radio" name="gestion-economica-financiera__2" value="5" id="611">  No lo cumplimos</label>
-                                    <label for="612"><input class="uk-radio" type="radio" name="gestion-economica-financiera__2" value="10" id="612">  Cumplimos parcialmente</label>
-                                    <label for="613"><input class="uk-radio" type="radio" name="gestion-economica-financiera__2" value="15" id="613">  Cumplimos mayoritariamente</label>
-                                    <label for="614"><input class="uk-radio" type="radio" name="gestion-economica-financiera__2" value="20" id="614">  Cumplimos totalmente</label>
+                    <div class="question pt-5" id="question6">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-02-ecosistema.png"><span class="azul">Ecosistema cooperativo</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>El GC <strong>designa representantes entre sus consejeros y funcionarios para actuar en otros ámbitos</strong>, los cuales son seleccionados y formados según perfiles especificos</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question24">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Posee un sistema para el <strong>seguimiento de la posición financiera integral</strong> de la cooperativa (posición de cereales / posición financiera / posición stock / posición USD)</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="621"><input class="uk-radio" type="radio" name="gestion-economica-financiera__3" value="5" id="621">  No lo cumplimos</label>
-                                    <label for="622"><input class="uk-radio" type="radio" name="gestion-economica-financiera__3" value="10" id="622">  Cumplimos parcialmente</label>
-                                    <label for="623"><input class="uk-radio" type="radio" name="gestion-economica-financiera__3" value="15" id="623">  Cumplimos mayoritariamente</label>
-                                    <label for="624"><input class="uk-radio" type="radio" name="gestion-economica-financiera__3" value="20" id="624">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="211"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="8.333" id="211">  No lo cumplimos</label>
+                                <label for="212"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="16.666" id="212">  Cumplimos parcialmente</label>
+                                <label for="213"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="25" id="213">  Cumplimos mayoritariamente</label>
+                                <label for="214"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="33.333" id="214">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="question pt-5" id="question25">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Los indicadores de <strong>rentabilidad, a nivel general y por unidad de negocio</strong> se miden, tienen objetivos definidos y presentan una tendencia creciente en los útlimos 3 años</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="631"><input class="uk-radio" type="radio" name="gestion-economica-financiera__4" value="5" id="631">  No lo cumplimos</label>
-                                    <label for="632"><input class="uk-radio" type="radio" name="gestion-economica-financiera__4" value="10" id="632">  Cumplimos parcialmente</label>
-                                    <label for="633"><input class="uk-radio" type="radio" name="gestion-economica-financiera__4" value="15" id="633">  Cumplimos mayoritariamente</label>
-                                    <label for="634"><input class="uk-radio" type="radio" name="gestion-economica-financiera__4" value="20" id="634">  Cumplimos totalmente</label>
+                    <div class="question pt-5" id="question7">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-02-ecosistema.png"><span class="azul">Ecosistema cooperativo</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Verifica y da cumplimiento a los <strong>requisitos estatutarios de las Entidades</strong> a las cuales pertenece, compartiendo regularmente su situación patrimonial, desempeño comercial y proyección financiera</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question26">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>El capital de trabajo, indices de liquidez y los distintos indicadores financieros se miden, tienen objetivos definidos y presentan una tendencia creciente en los últimos 3 años</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="641"><input class="uk-radio" type="radio" name="gestion-economica-financiera__5" value="5" id="641">  No lo cumplimos</label>
-                                    <label for="642"><input class="uk-radio" type="radio" name="gestion-economica-financiera__5" value="10" id="642">  Cumplimos parcialmente</label>
-                                    <label for="643"><input class="uk-radio" type="radio" name="gestion-economica-financiera__5" value="15" id="643">  Cumplimos mayoritariamente</label>
-                                    <label for="644"><input class="uk-radio" type="radio" name="gestion-economica-financiera__5" value="20" id="644">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="221"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="8.3333" id="221">  No lo cumplimos</label>
+                                <label for="222"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="16.666" id="222">  Cumplimos parcialmente</label>
+                                <label for="223"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="25" id="223">  Cumplimos mayoritariamente</label>
+                                <label for="224"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="33.333" id="224">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-
-                        <!--7. Mejora de procesos -->
-                        <div class="question pt-5" id="question27">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-07-mejor-de-procesos.png"><span class="azul">Mejora de procesos</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Los <strong>procesos clave están documentados</strong> y las responsabilidades conocidas por los involucrados</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="701"><input class="uk-radio" type="radio" name="mejora-de-procesos__1" value="6.25" id="701">  No lo cumplimos</label>
-                                    <label for="702"><input class="uk-radio" type="radio" name="mejora-de-procesos__1" value="12.5" id="702">  Cumplimos parcialmente</label>
-                                    <label for="703"><input class="uk-radio" type="radio" name="mejora-de-procesos__1" value="18.75" id="703">  Cumplimos mayoritariamente</label>
-                                    <label for="704"><input class="uk-radio" type="radio" name="mejora-de-procesos__1" value="25" id="704">  Cumplimos totalmente</label>
+                    <!--3. Estrategia e innovación-->
+                    <div class="question pt-5" id="question8">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-03-strategia-e-innovacion.png"><span class="azul">Estrategia e innovación</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Establece <strong>Objetivos Estratégicos</strong> para el mediano y largo plazo, considerando a los distintos grupos de interés</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question28">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-07-mejor-de-procesos.png"><span class="azul">Mejora de procesos</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Se favorece la <strong>mejora continua de los procesos</strong>, mediante equipos de mejora, introducción de nuevas tecnologías y auditorías internas</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="711"><input class="uk-radio" type="radio" name="mejora-de-procesos__2" value="6.25" id="711">  No lo cumplimos</label>
-                                    <label for="712"><input class="uk-radio" type="radio" name="mejora-de-procesos__2" value="12.5" id="712">  Cumplimos parcialmente</label>
-                                    <label for="713"><input class="uk-radio" type="radio" name="mejora-de-procesos__2" value="18.75" id="713">  Cumplimos mayoritariamente</label>
-                                    <label for="714"><input class="uk-radio" type="radio" name="mejora-de-procesos__2" value="25" id="714">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="301"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="6.25" id="301">  No lo cumplimos</label>
+                                <label for="302"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="12.5" id="302">  Cumplimos parcialmente</label>
+                                <label for="303"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="18.75" id="303">  Cumplimos mayoritariamente</label>
+                                <label for="304"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="25" id="304">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="question pt-5" id="question29">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-07-mejor-de-procesos.png"><span class="azul">Mejora de procesos</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Se realizan estudios de tecnologías disponibles, automatización, antigüedad y obsolescencia de las plantas contempladas en un plan de renovación.</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="721"><input class="uk-radio" type="radio" name="mejora-de-procesos__3" value="6.25" id="721">  No lo cumplimos</label>
-                                    <label for="722"><input class="uk-radio" type="radio" name="mejora-de-procesos__3" value="12.5" id="722">  Cumplimos parcialmente</label>
-                                    <label for="723"><input class="uk-radio" type="radio" name="mejora-de-procesos__3" value="18.75" id="723">  Cumplimos mayoritariamente</label>
-                                    <label for="724"><input class="uk-radio" type="radio" name="mejora-de-procesos__3" value="25" id="724">  Cumplimos totalmente</label>
+                    <div class="question pt-5" id="question9">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-03-strategia-e-innovacion.png"><span class="azul">Estrategia e innovación</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>El <strong>Plan Estratégico de la Cooperativa</strong> es comunicado y conocido por toda la organización</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question30">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-07-mejor-de-procesos.png"><span class="azul">Mejora de procesos</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Se miden indicadores de <strong>calidad y la productividad</strong>, tienen objetivos definidos y mejoraron en los últimos 3 años</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="731"><input class="uk-radio" type="radio" name="mejora-de-procesos__4" value="6.25" id="731">  No lo cumplimos</label>
-                                    <label for="732"><input class="uk-radio" type="radio" name="mejora-de-procesos__4" value="12.5" id="732">  Cumplimos parcialmente</label>
-                                    <label for="733"><input class="uk-radio" type="radio" name="mejora-de-procesos__4" value="18.75" id="733">  Cumplimos mayoritariamente</label>
-                                    <label for="734"><input class="uk-radio" type="radio" name="mejora-de-procesos__4" value="25" id="734">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="311"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="6.25" id="311">  No lo cumplimos</label>
+                                <label for="312"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="12.5" id="312">  Cumplimos parcialmente</label>
+                                <label for="313"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="18.75" id="313">  Cumplimos mayoritariamente</label>
+                                <label for="314"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="25" id="314">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                
-                        <!--8. Gestón ambiental -->
-                        <div class="question pt-5" id="question31">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-08-gestion-ambiental.png"><span class="azul">Gestión ambiental</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div><strong>Identifica, trata y controla los impactos ambientales</strong> asociados con esos aspectos significativos desde el proyecto hasta la disposición final. </div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="801"><input class="uk-radio" type="radio" name="gestion-ambiental__1" value="6.25" id="801">  No lo cumplimos</label>
-                                    <label for="802"><input class="uk-radio" type="radio" name="gestion-ambiental__1" value="12.5" id="802">  Cumplimos parcialmente</label>
-                                    <label for="803"><input class="uk-radio" type="radio" name="gestion-ambiental__1" value="18.75" id="803">  Cumplimos mayoritariamente</label>
-                                    <label for="804"><input class="uk-radio" type="radio" name="gestion-ambiental__1" value="25" id="804">  Cumplimos totalmente</label>
+                    <div class="question pt-5" id="question10">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-03-strategia-e-innovacion.png"><span class="azul">Estrategia e innovación</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>La evolución de objetivos e <strong>indicadores clave es monitoreada</strong> mendiante un tablero de control o herramienta similar</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question32">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-08-gestion-ambiental.png"><span class="azul">Gestión ambiental</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div><strong>Concientiza, capacita e involucra</strong> en la gestión ambiental a sus integrantes, clientes, productores y comunidad</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="811"><input class="uk-radio" type="radio" name="gestion-ambiental__2" value="6.25" id="811">  No lo cumplimos</label>
-                                    <label for="812"><input class="uk-radio" type="radio" name="gestion-ambiental__2" value="12.5" id="812">  Cumplimos parcialmente</label>
-                                    <label for="813"><input class="uk-radio" type="radio" name="gestion-ambiental__2" value="18.75" id="813">  Cumplimos mayoritariamente</label>
-                                    <label for="814"><input class="uk-radio" type="radio" name="gestion-ambiental__2" value="25" id="814">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="321"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="6.25" id="321">  No lo cumplimos</label>
+                                <label for="322"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="12.5" id="322">  Cumplimos parcialmente</label>
+                                <label for="323"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="18.75" id="323">  Cumplimos mayoritariamente</label>
+                                <label for="324"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="25" id="324">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="question pt-5" id="question33">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-08-gestion-ambiental.png"><span class="azul">Gestión ambiental</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Lleva adelante <strong>programas de reciclaje de insumos</strong> y eficiencia en el uso de recursos naturales/energéticos como bidones, papel, electricidad, plásticos y otros</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="821"><input class="uk-radio" type="radio" name="gestion-ambiental__3" value="6.25" id="821">  No lo cumplimos</label>
-                                    <label for="822"><input class="uk-radio" type="radio" name="gestion-ambiental__3" value="12.5" id="822">  Cumplimos parcialmente</label>
-                                    <label for="823"><input class="uk-radio" type="radio" name="gestion-ambiental__3" value="18.75" id="823">  Cumplimos mayoritariamente</label>
-                                    <label for="824"><input class="uk-radio" type="radio" name="gestion-ambiental__3" value="25" id="824">  Cumplimos totalmente</label>
+                    <div class="question pt-5" id="question11">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-03-strategia-e-innovacion.png"><span class="azul">Estrategia e innovación</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Gestiona estratégicamente las <strong>oportunidades/proyectos de innovación</strong>, evalúa riesgos e impactos y promueve la experimentación</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question34">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-08-gestion-ambiental.png"><span class="azul">Gestión ambiental</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Los <strong>impactos ambientales y el cumplimiento de exigencias ambientales</strong> se miden, tienen objetivos definidos y mejoraron en los últimos 3 años</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="831"><input class="uk-radio" type="radio" name="gestion-ambiental__4" value="6.25" id="831">  No lo cumplimos</label>
-                                    <label for="832"><input class="uk-radio" type="radio" name="gestion-ambiental__4" value="12.5" id="832">  Cumplimos parcialmente</label>
-                                    <label for="833"><input class="uk-radio" type="radio" name="gestion-ambiental__4" value="18.75" id="833">  Cumplimos mayoritariamente</label>
-                                    <label for="834"><input class="uk-radio" type="radio" name="gestion-ambiental__4" value="25" id="834">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="331"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="6.25" id="331">  No lo cumplimos</label>
+                                <label for="332"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="12.5" id="332">  Cumplimos parcialmente</label>
+                                <label for="333"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="18.75" id="333">  Cumplimos mayoritariamente</label>
+                                <label for="334"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="25" id="334">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <!--9. Desarrollo de comunidades -->
-                        <div class="question pt-5" id="question35">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>La <strong>responsabilidad social es parte del plan estratégico</strong>, es respaldada por el Gobierno Cooperativo y cuenta con un presupuesto asignado</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="901"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__1" value="6.25" id="901">  No lo cumplimos</label>
-                                    <label for="902"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__1" value="12.5" id="902">  Cumplimos parcialmente</label>
-                                    <label for="903"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__1" value="18.75" id="903">  Cumplimos mayoritariamente</label>
-                                    <label for="904"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__1" value="25" id="904">  Cumplimos totalmente</label>
+                    <!--4. Gestión del productor comercial-->
+                    <div class="question pt-5" id="question12">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Tiene definida una <strong>segmentación de asociados/clientes</strong> según necesidades y preferencias</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question36">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Realiza <strong>Balances Sociales</strong> reportando lo actuado y su impacto, siguiendo estándares y lineamientos internacionales </div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="911"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__2" value="6.25" id="911">  No lo cumplimos</label>
-                                    <label for="912"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__2" value="12.5" id="912">  Cumplimos parcialmente</label>
-                                    <label for="913"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__2" value="18.75" id="913">  Cumplimos mayoritariamente</label>
-                                    <label for="914"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__2" value="25" id="914">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="401"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__1" value="4.1666" id="401">  No lo cumplimos</label>
+                                <label for="402"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__1" value="8.333" id="402">  Cumplimos parcialmente</label>
+                                <label for="403"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__1" value="12.5" id="403">  Cumplimos mayoritariamente</label>
+                                <label for="404"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__1" value="16.666" id="404">  Cumplimos totalmente</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="question pt-5" id="question37">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Las <strong>actividades realizadas en la comunidad y sus impactos</strong> se miden,  tienen objetivos definidos y mejoraron en los últimos 3 años</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="921"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="6.25" id="921">  No lo cumplimos</label>
-                                    <label for="922"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="12.5" id="922">  Cumplimos parcialmente</label>
-                                    <label for="923"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="18.75" id="923">  Cumplimos mayoritariamente</label>
-                                    <label for="924"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="25" id="924">  Cumplimos totalmente</label>
+                    <div class="question pt-5" id="question13">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Genera <strong>planes de acción para mejorar</strong> la satisfacción del productor/cliente.</div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="question pt-5" id="question38">
-                            <div class="row">
-                                <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
-                                <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                    <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                    <div>Los niveles de Participación del <strong>Grupo de Juventudes</strong> se miden, tienen objetivos definidos y mejoraron en los últimos 3 años</div>
-                                    </div>
-                                </div>
-                                <div class="uk-margin question__options">
-                                    <label for="931"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="6.25" id="931">  No lo cumplimos</label>
-                                    <label for="932"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="12.5" id="932">  Cumplimos parcialmente</label>
-                                    <label for="933"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="18.75" id="933">  Cumplimos mayoritariamente</label>
-                                    <label for="934"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="25" id="934">  Cumplimos totalmente</label>
-                                </div>
+                            <div class="uk-margin question__options">
+                                <label for="411"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__2" value="4.1666" id="411">  No lo cumplimos</label>
+                                <label for="412"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__2" value="8.333" id="412">  Cumplimos parcialmente</label>
+                                <label for="413"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__2" value="12.5" id="413">  Cumplimos mayoritariamente</label>
+                                <label for="414"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__2" value="16.666" id="414">  Cumplimos totalmente</label>
                             </div>
                         </div>
-                                
-                        <input type='hidden' name='resultado[]' id="resultado" value=''>
+                    </div>
 
-                    </form>
+                    <div class="question pt-5" id="question14">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Conoce la <strong>Consecuencia de los asociados/clientes</strong> por cada negocio, da reconocimientos y tiene herramientas para fidelizar</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="421"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__3" value="4.1666" id="421">  No lo cumplimos</label>
+                                <label for="422"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__3" value="8.333" id="422">  Cumplimos parcialmente</label>
+                                <label for="423"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__3" value="12.5" id="423">  Cumplimos mayoritariamente</label>
+                                <label for="424"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__3" value="16.666" id="424">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!--Resultados-->
-                    <div id="ver-resultado" class="uk-margin">
-                      <div class="bg-light">
+                    <div class="question pt-5" id="question15">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Tiene una mesa de negocios con participación de todas las secciones, para <strong>potenciar la función comercial</strong> de la Cooperativa</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="431"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__4" value="4.1666" id="431">  No lo cumplimos</label>
+                                <label for="432"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__4" value="8.333" id="432">  Cumplimos parcialmente</label>
+                                <label for="433"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__4" value="12.5" id="433">  Cumplimos mayoritariamente</label>
+                                <label for="434"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__4" value="16.666" id="434">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question16">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>El desempeño empresarial de los productores, su solvencia patrimonial  y sustentabilidad se miden, tienen objetivos y mejoró en los ultimos 3 años</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="441"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="4.1666" id="441">  No lo cumplimos</label>
+                                <label for="442"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="8.333" id="442">  Cumplimos parcialmente</label>
+                                <label for="443"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="12.5" id="443">  Cumplimos mayoritariamente</label>
+                                <label for="444"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="16.666" id="444">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question17">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-06-gestion-economica.png"><span class="azul">Gestión del productor/comercial</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                            <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>La Satisfacción y Consecuencia de Asociados y Clientes  se mide, tiene objetivos y mejoró en los últimos 3 años</div>
+                            </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="451"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="4.1666" id="451">  No lo cumplimos</label>
+                                <label for="452"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="8.333" id="452">  Cumplimos parcialmente</label>
+                                <label for="453"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="12.5" id="453">  Cumplimos mayoritariamente</label>
+                                <label for="454"><input class="uk-radio" type="radio" name="gestion-del-productor-comercial__5" value="16.666" id="454">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--5. Recursos humanos-->
+                    <div class="question pt-5" id="question18">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-05-recursos-humanos.png"><span class="azul">Recursos Humanos</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Las incorporaciones se realizan de acuerdo a un <strong>proceso de selección definido</strong>,  según las descripciones y perfiles establecidos.</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="501"><input class="uk-radio" type="radio" name="recursos-humanos__1" value="6.25" id="501">  No lo cumplimos</label>
+                                <label for="502"><input class="uk-radio" type="radio" name="recursos-humanos__1" value="12.5" id="502">  Cumplimos parcialmente</label>
+                                <label for="503"><input class="uk-radio" type="radio" name="recursos-humanos__1" value="18.75" id="503">  Cumplimos mayoritariamente</label>
+                                <label for="504"><input class="uk-radio" type="radio" name="recursos-humanos__1" value="25" id="504">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question19">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-05-recursos-humanos.png"><span class="azul">Recursos Humanos</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Se identifican los puestos críticos y se generan los cuadros para eventuales reemplazo de los mismos.</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="511"><input class="uk-radio" type="radio" name="recursos-humanos__2" value="6.25" id="511">  No lo cumplimos</label>
+                                <label for="512"><input class="uk-radio" type="radio" name="recursos-humanos__2" value="12.5" id="512">  Cumplimos parcialmente</label>
+                                <label for="513"><input class="uk-radio" type="radio" name="recursos-humanos__2" value="18.75" id="513">  Cumplimos mayoritariamente</label>
+                                <label for="514"><input class="uk-radio" type="radio" name="recursos-humanos__2" value="25" id="514">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question20">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-05-recursos-humanos.png"><span class="azul">Recursos Humanos</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div><strong>Capacita a sus colaboradores</strong> de acuerdo a un plan que es monitoreado periódicamente </div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="521"><input class="uk-radio" type="radio" name="recursos-humanos__3" value="6.25" id="521">  No lo cumplimos</label>
+                                <label for="522"><input class="uk-radio" type="radio" name="recursos-humanos__3" value="12.5" id="522">  Cumplimos parcialmente</label>
+                                <label for="523"><input class="uk-radio" type="radio" name="recursos-humanos__3" value="18.75" id="523">  Cumplimos mayoritariamente</label>
+                                <label for="524"><input class="uk-radio" type="radio" name="recursos-humanos__3" value="25" id="524">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question21">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-05-recursos-humanos.png"><span class="azul">Recursos Humanos</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>La <strong>satisfacción de colaboradores</strong> se mide, tienen objetivos definidos y presentan una tendencia de mejora en los últimos 3 años</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="531"><input class="uk-radio" type="radio" name="recursos-humanos__4" value="6.25" id="531">  No lo cumplimos</label>
+                                <label for="532"><input class="uk-radio" type="radio" name="recursos-humanos__4" value="12.5" id="532">  Cumplimos parcialmente</label>
+                                <label for="533"><input class="uk-radio" type="radio" name="recursos-humanos__4" value="18.75" id="533">  Cumplimos mayoritariamente</label>
+                                <label for="534"><input class="uk-radio" type="radio" name="recursos-humanos__4" value="25" id="534">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--6. Gestión económica-financiera-->
+                    <div class="question pt-5" id="question22">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Cuenta con un <strong>Presupuesto de ingresos y gastos</strong> con instancias de revisión y ajustes periódicos</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="601"><input class="uk-radio" type="radio" name="gestion-economica-financiera__1" value="5" id="601">  No lo cumplimos</label>
+                                <label for="602"><input class="uk-radio" type="radio" name="gestion-economica-financiera__1" value="10" id="602">  Cumplimos parcialmente</label> 
+                                <label for="603"><input class="uk-radio" type="radio" name="gestion-economica-financiera__1" value="15" id="603">  Cumplimos mayoritariamente</label>
+                                <label for="604"><input class="uk-radio" type="radio" name="gestion-economica-financiera__1" value="20" id="604">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question23">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Confecciona un <strong>Balance mensual</strong> de situación patrimonial y de resultados a fin de analizar la evolución del ejercicio económico.</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="611"><input class="uk-radio" type="radio" name="gestion-economica-financiera__2" value="5" id="611">  No lo cumplimos</label>
+                                <label for="612"><input class="uk-radio" type="radio" name="gestion-economica-financiera__2" value="10" id="612">  Cumplimos parcialmente</label>
+                                <label for="613"><input class="uk-radio" type="radio" name="gestion-economica-financiera__2" value="15" id="613">  Cumplimos mayoritariamente</label>
+                                <label for="614"><input class="uk-radio" type="radio" name="gestion-economica-financiera__2" value="20" id="614">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question24">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Posee un sistema para el <strong>seguimiento de la posición financiera integral</strong> de la cooperativa (posición de cereales / posición financiera / posición stock / posición USD)</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="621"><input class="uk-radio" type="radio" name="gestion-economica-financiera__3" value="5" id="621">  No lo cumplimos</label>
+                                <label for="622"><input class="uk-radio" type="radio" name="gestion-economica-financiera__3" value="10" id="622">  Cumplimos parcialmente</label>
+                                <label for="623"><input class="uk-radio" type="radio" name="gestion-economica-financiera__3" value="15" id="623">  Cumplimos mayoritariamente</label>
+                                <label for="624"><input class="uk-radio" type="radio" name="gestion-economica-financiera__3" value="20" id="624">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question25">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Los indicadores de <strong>rentabilidad, a nivel general y por unidad de negocio</strong> se miden, tienen objetivos definidos y presentan una tendencia creciente en los útlimos 3 años</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="631"><input class="uk-radio" type="radio" name="gestion-economica-financiera__4" value="5" id="631">  No lo cumplimos</label>
+                                <label for="632"><input class="uk-radio" type="radio" name="gestion-economica-financiera__4" value="10" id="632">  Cumplimos parcialmente</label>
+                                <label for="633"><input class="uk-radio" type="radio" name="gestion-economica-financiera__4" value="15" id="633">  Cumplimos mayoritariamente</label>
+                                <label for="634"><input class="uk-radio" type="radio" name="gestion-economica-financiera__4" value="20" id="634">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question26">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>El capital de trabajo, indices de liquidez y los distintos indicadores financieros se miden, tienen objetivos definidos y presentan una tendencia creciente en los últimos 3 años</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="641"><input class="uk-radio" type="radio" name="gestion-economica-financiera__5" value="5" id="641">  No lo cumplimos</label>
+                                <label for="642"><input class="uk-radio" type="radio" name="gestion-economica-financiera__5" value="10" id="642">  Cumplimos parcialmente</label>
+                                <label for="643"><input class="uk-radio" type="radio" name="gestion-economica-financiera__5" value="15" id="643">  Cumplimos mayoritariamente</label>
+                                <label for="644"><input class="uk-radio" type="radio" name="gestion-economica-financiera__5" value="20" id="644">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--7. Mejora de procesos -->
+                    <div class="question pt-5" id="question27">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-07-mejor-de-procesos.png"><span class="azul">Mejora de procesos</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Los <strong>procesos clave están documentados</strong> y las responsabilidades conocidas por los involucrados</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="701"><input class="uk-radio" type="radio" name="mejora-de-procesos__1" value="6.25" id="701">  No lo cumplimos</label>
+                                <label for="702"><input class="uk-radio" type="radio" name="mejora-de-procesos__1" value="12.5" id="702">  Cumplimos parcialmente</label>
+                                <label for="703"><input class="uk-radio" type="radio" name="mejora-de-procesos__1" value="18.75" id="703">  Cumplimos mayoritariamente</label>
+                                <label for="704"><input class="uk-radio" type="radio" name="mejora-de-procesos__1" value="25" id="704">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question28">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-07-mejor-de-procesos.png"><span class="azul">Mejora de procesos</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Se favorece la <strong>mejora continua de los procesos</strong>, mediante equipos de mejora, introducción de nuevas tecnologías y auditorías internas</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="711"><input class="uk-radio" type="radio" name="mejora-de-procesos__2" value="6.25" id="711">  No lo cumplimos</label>
+                                <label for="712"><input class="uk-radio" type="radio" name="mejora-de-procesos__2" value="12.5" id="712">  Cumplimos parcialmente</label>
+                                <label for="713"><input class="uk-radio" type="radio" name="mejora-de-procesos__2" value="18.75" id="713">  Cumplimos mayoritariamente</label>
+                                <label for="714"><input class="uk-radio" type="radio" name="mejora-de-procesos__2" value="25" id="714">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question29">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-07-mejor-de-procesos.png"><span class="azul">Mejora de procesos</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Se realizan estudios de tecnologías disponibles, automatización, antigüedad y obsolescencia de las plantas contempladas en un plan de renovación.</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="721"><input class="uk-radio" type="radio" name="mejora-de-procesos__3" value="6.25" id="721">  No lo cumplimos</label>
+                                <label for="722"><input class="uk-radio" type="radio" name="mejora-de-procesos__3" value="12.5" id="722">  Cumplimos parcialmente</label>
+                                <label for="723"><input class="uk-radio" type="radio" name="mejora-de-procesos__3" value="18.75" id="723">  Cumplimos mayoritariamente</label>
+                                <label for="724"><input class="uk-radio" type="radio" name="mejora-de-procesos__3" value="25" id="724">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question30">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-07-mejor-de-procesos.png"><span class="azul">Mejora de procesos</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Se miden indicadores de <strong>calidad y la productividad</strong>, tienen objetivos definidos y mejoraron en los últimos 3 años</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="731"><input class="uk-radio" type="radio" name="mejora-de-procesos__4" value="6.25" id="731">  No lo cumplimos</label>
+                                <label for="732"><input class="uk-radio" type="radio" name="mejora-de-procesos__4" value="12.5" id="732">  Cumplimos parcialmente</label>
+                                <label for="733"><input class="uk-radio" type="radio" name="mejora-de-procesos__4" value="18.75" id="733">  Cumplimos mayoritariamente</label>
+                                <label for="734"><input class="uk-radio" type="radio" name="mejora-de-procesos__4" value="25" id="734">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+            
+                    <!--8. Gestón ambiental -->
+                    <div class="question pt-5" id="question31">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-08-gestion-ambiental.png"><span class="azul">Gestión ambiental</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div><strong>Identifica, trata y controla los impactos ambientales</strong> asociados con esos aspectos significativos desde el proyecto hasta la disposición final. </div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="801"><input class="uk-radio" type="radio" name="gestion-ambiental__1" value="6.25" id="801">  No lo cumplimos</label>
+                                <label for="802"><input class="uk-radio" type="radio" name="gestion-ambiental__1" value="12.5" id="802">  Cumplimos parcialmente</label>
+                                <label for="803"><input class="uk-radio" type="radio" name="gestion-ambiental__1" value="18.75" id="803">  Cumplimos mayoritariamente</label>
+                                <label for="804"><input class="uk-radio" type="radio" name="gestion-ambiental__1" value="25" id="804">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question32">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-08-gestion-ambiental.png"><span class="azul">Gestión ambiental</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div><strong>Concientiza, capacita e involucra</strong> en la gestión ambiental a sus integrantes, clientes, productores y comunidad</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="811"><input class="uk-radio" type="radio" name="gestion-ambiental__2" value="6.25" id="811">  No lo cumplimos</label>
+                                <label for="812"><input class="uk-radio" type="radio" name="gestion-ambiental__2" value="12.5" id="812">  Cumplimos parcialmente</label>
+                                <label for="813"><input class="uk-radio" type="radio" name="gestion-ambiental__2" value="18.75" id="813">  Cumplimos mayoritariamente</label>
+                                <label for="814"><input class="uk-radio" type="radio" name="gestion-ambiental__2" value="25" id="814">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question33">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-08-gestion-ambiental.png"><span class="azul">Gestión ambiental</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Lleva adelante <strong>programas de reciclaje de insumos</strong> y eficiencia en el uso de recursos naturales/energéticos como bidones, papel, electricidad, plásticos y otros</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="821"><input class="uk-radio" type="radio" name="gestion-ambiental__3" value="6.25" id="821">  No lo cumplimos</label>
+                                <label for="822"><input class="uk-radio" type="radio" name="gestion-ambiental__3" value="12.5" id="822">  Cumplimos parcialmente</label>
+                                <label for="823"><input class="uk-radio" type="radio" name="gestion-ambiental__3" value="18.75" id="823">  Cumplimos mayoritariamente</label>
+                                <label for="824"><input class="uk-radio" type="radio" name="gestion-ambiental__3" value="25" id="824">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question34">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-08-gestion-ambiental.png"><span class="azul">Gestión ambiental</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Los <strong>impactos ambientales y el cumplimiento de exigencias ambientales</strong> se miden, tienen objetivos definidos y mejoraron en los últimos 3 años</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="831"><input class="uk-radio" type="radio" name="gestion-ambiental__4" value="6.25" id="831">  No lo cumplimos</label>
+                                <label for="832"><input class="uk-radio" type="radio" name="gestion-ambiental__4" value="12.5" id="832">  Cumplimos parcialmente</label>
+                                <label for="833"><input class="uk-radio" type="radio" name="gestion-ambiental__4" value="18.75" id="833">  Cumplimos mayoritariamente</label>
+                                <label for="834"><input class="uk-radio" type="radio" name="gestion-ambiental__4" value="25" id="834">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--9. Desarrollo de comunidades -->
+                    <div class="question pt-5" id="question35">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>La <strong>responsabilidad social es parte del plan estratégico</strong>, es respaldada por el Gobierno Cooperativo y cuenta con un presupuesto asignado</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="901"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__1" value="6.25" id="901">  No lo cumplimos</label>
+                                <label for="902"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__1" value="12.5" id="902">  Cumplimos parcialmente</label>
+                                <label for="903"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__1" value="18.75" id="903">  Cumplimos mayoritariamente</label>
+                                <label for="904"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__1" value="25" id="904">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question36">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Realiza <strong>Balances Sociales</strong> reportando lo actuado y su impacto, siguiendo estándares y lineamientos internacionales </div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="911"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__2" value="6.25" id="911">  No lo cumplimos</label>
+                                <label for="912"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__2" value="12.5" id="912">  Cumplimos parcialmente</label>
+                                <label for="913"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__2" value="18.75" id="913">  Cumplimos mayoritariamente</label>
+                                <label for="914"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__2" value="25" id="914">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question37">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Las <strong>actividades realizadas en la comunidad y sus impactos</strong> se miden,  tienen objetivos definidos y mejoraron en los últimos 3 años</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="921"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="6.25" id="921">  No lo cumplimos</label>
+                                <label for="922"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="12.5" id="922">  Cumplimos parcialmente</label>
+                                <label for="923"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="18.75" id="923">  Cumplimos mayoritariamente</label>
+                                <label for="924"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="25" id="924">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question pt-5" id="question38">
+                        <div class="row">
+                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
+                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
+                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
+                                <div>Los niveles de Participación del <strong>Grupo de Juventudes</strong> se miden, tienen objetivos definidos y mejoraron en los últimos 3 años</div>
+                                </div>
+                            </div>
+                            <div class="uk-margin question__options">
+                                <label for="931"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="6.25" id="931">  No lo cumplimos</label>
+                                <label for="932"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="12.5" id="932">  Cumplimos parcialmente</label>
+                                <label for="933"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="18.75" id="933">  Cumplimos mayoritariamente</label>
+                                <label for="934"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="25" id="934">  Cumplimos totalmente</label>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <input type='hidden' name='resultado[]' id="resultado" value=''>
+
+                </form>
+
+                <!--Resultados-->
+                <div id="ver-resultado" class="uk-margin">
+                    <div class="bg-light">
                         <div class="uk-container">
-                          <div class="row">
-                            <div class=""><p class="uk-h2">Resultado</p></div>
-                          </div>
-                          <div class="">
+                            <div class="row">
+                                <div class=""><p class="uk-h2">Resultado</p></div>
+                            </div>
                             <div class="uk-margin">
-                              <div id="result" class="chart-container" style="position: relative; width:80vw">
-                                <canvas id="chart"></canvas>
-                              </div>
-                            </div>
-                            <div>
-                                <div class="h3 result-text">
-                                    Tu cooperativa se destaca en <span class="max uk-text-primary uk-text-bold"></span>.
-                                    <p>Para acceder a una evaluación más completa y participar del Modelo de Gestión Cooperativa, <a href="/contacto">completá el formulario</a>.</p>
+                                <div id="result" class="chart-container" style="position: relative; width:80vw">
+                                    <canvas id="chart"></canvas>
                                 </div>
-                                
                             </div>
-                          </div>
+                            <div class="h3 result-text">
+                                Tu cooperativa se destaca en <span class="max uk-text-primary uk-text-bold"></span>.
+                                <p>Para acceder a una evaluación más completa y participar del Modelo de Gestión Cooperativa <a href="/contacto" class="cta uk-border-pill uk-button uk-button-small uk-text-light uk-text-bolder uk-button-primary uk-padding-small">completá el formulario</a></p>
+                            </div>
                         </div>
-                      </div>
-
-                      
-                      <div class="uk-container uk-margin-top">
-                        <hr class="uk-divider-icon">
-                        <div class="uk-margin-top">
-                        <h3>Recursos útiles de acuerdo a tus resultados</h3>
-                          <div id="cursos-sugeridos" class="uk-margin">
-                          </div>
-                        </div>
-                      </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        <section id="cursos-sugeridos" class="uk-section listado no-container">
+            <div class="uk-container-expand"></div>
+        </section>
 	</main><!-- #main -->
 
 <?php

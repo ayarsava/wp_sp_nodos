@@ -189,9 +189,9 @@ function my_cursos_list_cb() {
 	// Y las unimos separadas por coma
 	$cats_string = join(",", $cats);
 	
-	
-	echo "<h3>Usando el orden</h3>";
-	
+	echo '<h2 class="uk-margin-medium uk-text-bold">Recursos útiles de acuerdo a tus resultados</h2>';
+	echo '<ul class="uk-grid-collapse uk-child-width-1-2 uk-child-width-1-3@m uk-text-small uk-margin-small" uk-grid uk-height-match="target: > li"  uk-margin>';
+                
 	$posts_existentes = [];
 	foreach ($cats as $cat){
 	    $args = array(
@@ -200,40 +200,21 @@ function my_cursos_list_cb() {
 	        'category_name' => $cats_string,
 	    );
 	    $query = new WP_Query( $args );
-	
+		
 	    if ( $query->have_posts() ) {
-			echo '<ul>';
+			
 	        while ($query->have_posts()) {
 	            $query->the_post();
 	            $post_id = get_the_ID();
 	            if (!in_array($post_id, $posts_existentes)){
-	                echo '<li>' . get_the_title() . '</li>';
+	                get_template_part('layouts/card');
 	                array_push($posts_existentes, $post_id);
 	            }
 			}
-			echo '</ul>';
 	    }
 	}
-	
-	
-	
-	echo "<h3>No usando el orden</h3>";
-		 $args = array(
-			 'post_type' => 'post',
-			 'status' => 'publish',
-		// Esto debería ser dinamico. Traer las categorias con menor puntaje.
-        'category_name' => $cats,
-    );
-    $query = new WP_Query( $args );
 
-    if ( $query->have_posts() ) {
-        echo '<ul>';
-        while ($query->have_posts()) {
-            $query->the_post();
-            echo '<li>' . get_the_title() . '</li>';
-        }
-        echo '</ul>';
-    }
+	echo '</ul>';
 
     wp_die();
 }

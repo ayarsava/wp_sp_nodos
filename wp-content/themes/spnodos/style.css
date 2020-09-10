@@ -13000,19 +13000,22 @@ section#home-step-4 .icon-list .line {
   top: 20px;
 }
 
-section#listado ul li .card-image-wrapper {
+section#listado ul li .card-image-wrapper,
+section#cursos-sugeridos ul li .card-image-wrapper {
   height: 200px;
 }
-section#listado ul li .uk-card-title {
+section#listado ul li .uk-card-title,
+section#cursos-sugeridos ul li .uk-card-title {
   font-size: 1rem;
 }
-section#listado ul li .card-body {
+section#listado ul li .card-body,
+section#cursos-sugeridos ul li .card-body {
   padding: 30px 30px 30px 15px;
 }
 
 .categorias a {
-  background: #ffffff38;
-  padding: 5px 10px;
+  background: #ffffff38 !important;
+  color: #FFF !important;
 }
 
 .page.uk-section {
@@ -13182,13 +13185,16 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
     max-width: calc(100% + 90px);
   }
 
-  section#listado ul li .card-image-wrapper {
+  section#listado ul li .card-image-wrapper,
+section#cursos-sugeridos ul li .card-image-wrapper {
     height: 300px;
   }
-  section#listado ul li .card-body {
+  section#listado ul li .card-body,
+section#cursos-sugeridos ul li .card-body {
     padding-left: 0px;
   }
-  section#listado ul li .uk-card-title {
+  section#listado ul li .uk-card-title,
+section#cursos-sugeridos ul li .uk-card-title {
     font-size: 1.5rem;
   }
 }
@@ -13280,6 +13286,10 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
 .is-style-is-wide {
   width: 100%;
   height: auto;
+}
+
+#cursos-sugeridos {
+  display: none;
 }
 
 /*--------------------------------------------------------------

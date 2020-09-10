@@ -240,7 +240,8 @@ section#home-step-4 {
     }
 }
 // Section Listados
-section#listado ul {
+section#listado ul,
+section#cursos-sugeridos ul {
     li {
         .card-image-wrapper {
             height: 200px;
@@ -255,8 +256,8 @@ section#listado ul {
 }
 
 .categorias a {
-    background: #ffffff38;
-    padding: 5px 10px;
+    background: #ffffff38!important;
+    color: #FFF!important;
 }
 .page.uk-section {
     padding-left:180px;
@@ -434,7 +435,8 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     }
     
     
-    section#listado {
+    section#listado,
+    section#cursos-sugeridos {
         ul {
             li {
                 .card-image-wrapper {
@@ -549,4 +551,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 .is-style-is-wide {
     width: 100%;
     height: auto;
+}
+#cursos-sugeridos {
+    display: none;
 }
