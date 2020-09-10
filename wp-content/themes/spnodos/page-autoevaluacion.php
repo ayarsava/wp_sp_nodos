@@ -179,10 +179,10 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="uk-margin question__options">
-                                    <label for="301"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="8.3333" id="301">  No lo cumplimos</label>
-                                    <label for="302"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="16.666" id="302">  Cumplimos parcialmente</label>
-                                    <label for="303"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="25" id="303">  Cumplimos mayoritariamente</label>
-                                    <label for="304"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="33.333" id="304">  Cumplimos totalmente</label>
+                                    <label for="301"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="6.25" id="301">  No lo cumplimos</label>
+                                    <label for="302"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="12.5" id="302">  Cumplimos parcialmente</label>
+                                    <label for="303"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="18.75" id="303">  Cumplimos mayoritariamente</label>
+                                    <label for="304"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__1" value="25" id="304">  Cumplimos totalmente</label>
                                 </div>
                             </div>
                         </div>
@@ -196,10 +196,10 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="uk-margin question__options">
-                                    <label for="311"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="8.3333" id="311">  No lo cumplimos</label>
-                                    <label for="312"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="16.666" id="312">  Cumplimos parcialmente</label>
-                                    <label for="313"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="25" id="313">  Cumplimos mayoritariamente</label>
-                                    <label for="314"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="33.333" id="314">  Cumplimos totalmente</label>
+                                    <label for="311"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="6.25" id="311">  No lo cumplimos</label>
+                                    <label for="312"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="12.5" id="312">  Cumplimos parcialmente</label>
+                                    <label for="313"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="18.75" id="313">  Cumplimos mayoritariamente</label>
+                                    <label for="314"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__2" value="25" id="314">  Cumplimos totalmente</label>
                                 </div>
                             </div>
                         </div>
@@ -213,10 +213,10 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="uk-margin question__options">
-                                    <label for="321"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="8.3333" id="321">  No lo cumplimos</label>
-                                    <label for="322"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="16.666" id="322">  Cumplimos parcialmente</label>
-                                    <label for="323"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="25" id="323">  Cumplimos mayoritariamente</label>
-                                    <label for="324"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="33.333" id="324">  Cumplimos totalmente</label>
+                                    <label for="321"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="6.25" id="321">  No lo cumplimos</label>
+                                    <label for="322"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="12.5" id="322">  Cumplimos parcialmente</label>
+                                    <label for="323"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="18.75" id="323">  Cumplimos mayoritariamente</label>
+                                    <label for="324"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__3" value="25" id="324">  Cumplimos totalmente</label>
                                 </div>
                             </div>
                         </div>
@@ -230,10 +230,10 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="uk-margin question__options">
-                                    <label for="331"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="8.3333" id="331">  No lo cumplimos</label>
-                                    <label for="332"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="16.666" id="332">  Cumplimos parcialmente</label>
-                                    <label for="333"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="25" id="333">  Cumplimos mayoritariamente</label>
-                                    <label for="334"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="33.333" id="334">  Cumplimos totalmente</label>
+                                    <label for="331"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="6.25" id="331">  No lo cumplimos</label>
+                                    <label for="332"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="12.5" id="332">  Cumplimos parcialmente</label>
+                                    <label for="333"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="18.75" id="333">  Cumplimos mayoritariamente</label>
+                                    <label for="334"><input class="uk-radio" type="radio" name="estrategia-e-innovacion__4" value="25" id="334">  Cumplimos totalmente</label>
                                 </div>
                             </div>
                         </div>

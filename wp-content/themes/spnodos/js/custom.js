@@ -39,7 +39,7 @@ var autoEvaluacion = function() {
 
     var current = 1;
     var flag = true;
-    var totalpreguntas = 7;
+    var totalpreguntas = 38;
 
     // LABELS
     var labels = ["GOBIERNO COOPERATIVO", "ECOSISTEMA COOPERATIVO","ESTRATEGIA E INNOVACIÓN","GESTIÓN DEL PRODUCTOR/COMERCIAL","RECURSOS HUMANOS","GESTIÓN ECONÓMICA-FINANCIERA","MEJORA DE PROCESOS","GESTIÓN AMBIENTAL","DESARROLLO DE COMUNIDADES"];
