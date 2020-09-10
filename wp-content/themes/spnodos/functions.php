@@ -184,14 +184,56 @@ function my_cursos_list_cb() {
     if ( ! wp_verify_nonce( $nonce, 'my-ajax-nonce' ) ) {
         die ( 'Busted!');
     }
+    // Obtenemos las categorías del POST
 	$cats = $_POST['cats'];
+
+    // Filtramos para dejar sólo las que tengan un valor inferior a 70
+    $cats = array_filter($cats, function($valor_categoria){return $valor_categoria < 70;});
+
+    // Ordenamos de menor a mayor por la key
+    asort($cats);
+
+    // Nos quedamos sólo con las categorías (dejamos de lado los valores)
+    $cats = array_keys($cats);
+
+    // Y las unimos separadas por coma
+    $cats_string = join(",", $cats);
+
+
+    echo "<h3>Usando el orden</h3>";
+
+    echo '<ul>';
+    $posts_existentes = [];
+    foreach ($cats as $cat){
+        $args = array(
+            'post_type' => 'post',
+            'status' => 'publish',
+            'category_name' => $cat,
+        );
+        $query = new WP_Query( $args );
+
+        if ( $query->have_posts() ) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                $post_id = get_the_ID();
+                if (!in_array($post_id, $posts_existentes)){
+                    echo '<li>' . get_the_title() . '</li>';
+                    array_push($posts_existentes, $post_id);
+                }
+            }
+        }
+    }
+    echo '</ul>';
+
+
+    echo "<h3>No usando el orden</h3>";
     $args = array(
 		'post_type' => 'post',
 		'status' => 'publish',
-		// Esto debería ser dinamico. Traer las categorias con menor puntaje.
-        'category_name' => $cats,
+        'category_name' => $cats_string,
     );
     $query = new WP_Query( $args );
+
 
     if ( $query->have_posts() ) {
         echo '<ul>';

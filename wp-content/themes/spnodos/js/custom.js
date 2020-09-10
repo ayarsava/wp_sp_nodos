@@ -39,7 +39,7 @@ var autoEvaluacion = function() {
         
             var current = 1;
             var flag = true;
-            var totalpreguntas = 4;
+            var totalpreguntas = 38;
         
             // LABELS
             var labels = ["GOBIERNO COOPERATIVO", "ECOSISTEMA COOPERATIVO","ESTRATEGIA E INNOVACIÓN","GESTIÓN DEL PRODUCTOR/COMERCIAL","RECURSOS HUMANOS","GESTIÓN ECONÓMICA-FINANCIERA","MEJORA DE PROCESOS","GESTIÓN AMBIENTAL","DESARROLLO DE COMUNIDADES"];
@@ -85,7 +85,7 @@ var autoEvaluacion = function() {
                           $('#ver-resultado').fadeIn(200);
                           $('#progress').fadeOut(200);
         
-                          results();
+                          results(val);
         
                           if (max.length > 0) {
                             var str = max.slice(0, -1).join(', ')+' y '+max.slice(-1);
@@ -136,11 +136,16 @@ var autoEvaluacion = function() {
               while (length--) callback.call(context, tuples[length][0], tuples[length][1]);
             }
         
-            function results() {
+            function results(val) {
+                console.log(val);
                 $.ajax({
                   type: "post",
                   url: ajax_var.url,
-                  data: "action=" + ajax_var.action + "&nonce=" + ajax_var.nonce,
+                  data: {
+                    action: ajax_var.action,
+                    nonce: ajax_var.nonce,
+                    cats: val,
+                  },
                   success: function(results){
                       $('#cursos-sugeridos').html(results);
                   }
