@@ -154,28 +154,19 @@ function spnodos_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-}
-add_action( 'wp_enqueue_scripts', 'spnodos_scripts' );
-
-function autoevaluacion_scripts() {
-    if( is_page( array( 'autoevaluacion' ) ) ){
+	if( is_page( 'autoevaluacion' ) ){
         wp_enqueue_script( 'jquery3', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), _S_VERSION, true );
 		wp_enqueue_script( 'chartjs', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js', array(), _S_VERSION, true  );
-    }
+		wp_enqueue_script( 'my_js', get_theme_file_uri( 'js/custom.js'), array(), _S_VERSION, true );
+
+		wp_localize_script( 'my_js', 'ajax_var', array(
+			'url'    => admin_url( 'admin-ajax.php' ),
+			'nonce'  => wp_create_nonce( 'my-ajax-nonce' ),
+			'action' => 'cursos-list'
+		) );
+	}
 }
-add_action( 'wp_enqueue_scripts', 'autoevaluacion_scripts' );
-
-function my_load_scripts() {
-    wp_enqueue_script( 'my_js', get_theme_file_uri( 'js/custom.js'), array(), _S_VERSION, true );
-
-    wp_localize_script( 'my_js', 'ajax_var', array(
-        'url'    => admin_url( 'admin-ajax.php' ),
-        'nonce'  => wp_create_nonce( 'my-ajax-nonce' ),
-        'action' => 'cursos-list'
-    ) );
-}
-add_action( 'wp_enqueue_scripts', 'my_load_scripts' );
-
+add_action( 'wp_enqueue_scripts', 'spnodos_scripts' );
 
 function my_cursos_list_cb() {
     // Check for nonce security
@@ -184,56 +175,14 @@ function my_cursos_list_cb() {
     if ( ! wp_verify_nonce( $nonce, 'my-ajax-nonce' ) ) {
         die ( 'Busted!');
     }
-    // Obtenemos las categorías del POST
 	$cats = $_POST['cats'];
-
-    // Filtramos para dejar sólo las que tengan un valor inferior a 70
-    $cats = array_filter($cats, function($valor_categoria){return $valor_categoria < 70;});
-
-    // Ordenamos de menor a mayor por la key
-    asort($cats);
-
-    // Nos quedamos sólo con las categorías (dejamos de lado los valores)
-    $cats = array_keys($cats);
-
-    // Y las unimos separadas por coma
-    $cats_string = join(",", $cats);
-
-
-    echo "<h3>Usando el orden</h3>";
-
-    echo '<ul>';
-    $posts_existentes = [];
-    foreach ($cats as $cat){
-        $args = array(
-            'post_type' => 'post',
-            'status' => 'publish',
-            'category_name' => $cat,
-        );
-        $query = new WP_Query( $args );
-
-        if ( $query->have_posts() ) {
-            while ($query->have_posts()) {
-                $query->the_post();
-                $post_id = get_the_ID();
-                if (!in_array($post_id, $posts_existentes)){
-                    echo '<li>' . get_the_title() . '</li>';
-                    array_push($posts_existentes, $post_id);
-                }
-            }
-        }
-    }
-    echo '</ul>';
-
-
-    echo "<h3>No usando el orden</h3>";
     $args = array(
 		'post_type' => 'post',
 		'status' => 'publish',
-        'category_name' => $cats_string,
+		// Esto debería ser dinamico. Traer las categorias con menor puntaje.
+        'category_name' => $cats,
     );
     $query = new WP_Query( $args );
-
 
     if ( $query->have_posts() ) {
         echo '<ul>';
@@ -250,6 +199,33 @@ add_action( 'wp_ajax_nopriv_cursos-list', 'my_cursos_list_cb' );
 add_action( 'wp_ajax_cursos-list', 'my_cursos_list_cb' );
 
 
+/**
+ * Disable the emoji's
+ */
+function disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	
+	// Remove from TinyMCE
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+}
+add_action( 'init', 'disable_emojis' );
+
+/**
+ * Filter out the tinymce emoji plugin.
+ */
+function disable_emojis_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
+}
 /**
  * Implement the Custom Header feature.
  */
@@ -277,3 +253,23 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Register Custom Block Styles
+ */
+if ( function_exists( 'register_block_style' ) ) {
+    function block_styles_register_block_styles() {
+        /**
+         * Register block style
+         */
+        register_block_style(
+            'core/image',
+            array(
+                'name'         => 'is-wide',
+                'label'        => 'Ancho completo',
+                'style_handle' => 'block-styles-stylesheet',
+            )
+        );
+    }
+
+    add_action( 'init', 'block_styles_register_block_styles' );
+}

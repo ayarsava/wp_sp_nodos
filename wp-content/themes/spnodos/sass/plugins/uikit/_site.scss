@@ -254,12 +254,16 @@ section#listado ul {
     }
 }
 
+.categorias a {
+    background: #ffffff38;
+    padding: 5px 10px;
+}
 .page.uk-section {
     padding-left:180px;
     padding-bottom:0;
     margin-bottom:0;
     .layout {
-        p {
+        p, figure {
             width: 66%;
             font-weight: 300;
         }
@@ -339,6 +343,30 @@ section#listado ul {
             padding-bottom: 0;
             padding-top:0;
         }
+        .wp-block-embed {
+            .wp-block-embed__wrapper {
+                position: relative;
+                display: block;
+                width: 100%;
+                padding: 0;
+                overflow: hidden;
+                &::before {
+                    padding-top: 56.25%;
+                    display: block;
+                    content: "";
+                }
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                }
+            }
+        }
+        
     }
 }
 
@@ -464,7 +492,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
         }
     }
     section#hero .hero-inner {
-        .hero-title, .hero-text {
+        .hero-title, .hero-text, .categorias {
             padding-left: 40px;
             padding-right: 75px;
         }
@@ -515,4 +543,10 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
 
 /* Large screen and bigger */
 @media (min-width: $breakpoint-xlarge) {
+}
+
+/*wp-admin*/
+.is-style-is-wide {
+    width: 100%;
+    height: auto;
 }

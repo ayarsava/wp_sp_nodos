@@ -13010,12 +13010,17 @@ section#listado ul li .card-body {
   padding: 30px 30px 30px 15px;
 }
 
+.categorias a {
+  background: #ffffff38;
+  padding: 5px 10px;
+}
+
 .page.uk-section {
   padding-left: 180px;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-.page.uk-section .layout p {
+.page.uk-section .layout p, .page.uk-section .layout figure {
   width: 66%;
   font-weight: 300;
 }
@@ -13094,6 +13099,27 @@ section#listado ul li .card-body {
   margin-top: 0;
   padding-bottom: 0;
   padding-top: 0;
+}
+.page.uk-section .layout .wp-block-embed .wp-block-embed__wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.page.uk-section .layout .wp-block-embed .wp-block-embed__wrapper::before {
+  padding-top: 56.25%;
+  display: block;
+  content: "";
+}
+.page.uk-section .layout .wp-block-embed .wp-block-embed__wrapper iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .autoevaluacion .question, .autoevaluacion #ver-resultado, .autoevaluacion .survey {
@@ -13208,7 +13234,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
     width: 136px;
   }
 
-  section#hero .hero-inner .hero-title, section#hero .hero-inner .hero-text {
+  section#hero .hero-inner .hero-title, section#hero .hero-inner .hero-text, section#hero .hero-inner .categorias {
     padding-left: 40px;
     padding-right: 75px;
   }
@@ -13250,6 +13276,12 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
   }
 }
 /* Large screen and bigger */
+/*wp-admin*/
+.is-style-is-wide {
+  width: 100%;
+  height: auto;
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
