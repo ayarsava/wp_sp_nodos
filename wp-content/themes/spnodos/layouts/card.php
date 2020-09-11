@@ -18,6 +18,8 @@
 
     if ($src) {
         echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><img src="'. $src[0] .'" alt="" uk-cover></a>';
+    } else {
+        echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><img src="' . get_template_directory_uri() . '/assets/img/forma-06-mano.png" alt="" style="background-color:#FFF;" uk-cover></a>';
     }
     echo '</div>';
     echo '<div class="card-body"><h3 class="uk-card-title uk-text-bold"><span class="uk-link-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'. get_the_title() .'</a></span></h3>';

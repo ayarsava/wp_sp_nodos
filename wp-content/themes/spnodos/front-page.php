@@ -158,7 +158,7 @@ get_header();
 </section>
 
 
-<!--LISTADO-->    
+<!--LISTADO   
 <section id="listado" class="uk-section listado no-container">
     <div class="uk-text-light">
         <div>
@@ -190,7 +190,7 @@ get_header();
         </div>
 
     </div>
-</section>
+</section>--> 
 
 <?php
 get_footer();

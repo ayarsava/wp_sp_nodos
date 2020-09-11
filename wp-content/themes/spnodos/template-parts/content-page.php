@@ -12,7 +12,7 @@
 <!--Hero-->
 <section id="hero" class="uk-section uk-background-primary uk-light uk-padding-remove-bottom">
 	<div class="hero-inner uk-container">
-		<?php the_title( '<h1 class="hero-title uk-width-2-3@m uk-animation-slide-left">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="hero-title uk-width-4-5@m uk-animation-slide-left">', '</h1>' ); ?>
 		<?php if ( has_excerpt() ) : ?>
 		<div class="hero-text uk-width-2-3@m">
 			<p><?php the_excerpt();?></p>
