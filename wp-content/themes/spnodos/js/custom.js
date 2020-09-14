@@ -88,8 +88,11 @@ var autoEvaluacion = function() {
                   results(val);
 
                   if (max.length > 1) {
-                    var str = max.slice(0, -1).join(', ')+' y '+max.slice(-1);
+                    max.reverse();
+                    var str = max.slice(0, 3).join(', ').replace(/, ([^,]*)$/, ' y $1');
+                    var strmin = min.slice(0, 3).join(', ').replace(/, ([^,]*)$/, ' y $1');
                     $('span.max').prepend(str);
+                    $('span.min').prepend(strmin);
                   } else if (max.length == 1) {
                     var str = max;
                     $('span.max').prepend(str);

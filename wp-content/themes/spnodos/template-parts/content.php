@@ -36,12 +36,14 @@
 		<a href="#content" class="uk-animation-fast uk-animation-slide-top" uk-scroll><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow.svg" uk-svg width="15"></a>
 		</div>
 	</div>
+	<?php if ( has_post_thumbnail() ) {?>
 	<!--Hero Media-->
     <div id="hero-media" style="background-color: #f1f1f1;">
         <div class="media-wrapper uk-clearfix">
 		<?php the_post_thumbnail('full', array('class' => 'media')); ?>
         </div>
     </div>
+	<?php } ?>
 </section>              
 
 <!--PAGE-->

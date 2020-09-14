@@ -129,7 +129,7 @@ get_header();
                                 <label for="201"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="8.333" id="201">  No lo cumplimos</label>
                                 <label for="202"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="16.666" id="202">  Cumplimos parcialmente</label>
                                 <label for="203"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="25" id="203">  Cumplimos mayoritariamente</label>
-                                <label for="204"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="34.333" id="204">  Cumplimos totalmente</label>
+                                <label for="204"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__1" value="34" id="204">  Cumplimos totalmente</label>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ get_header();
                                 <label for="211"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="8.333" id="211">  No lo cumplimos</label>
                                 <label for="212"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="16.666" id="212">  Cumplimos parcialmente</label>
                                 <label for="213"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="25" id="213">  Cumplimos mayoritariamente</label>
-                                <label for="214"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="33.333" id="214">  Cumplimos totalmente</label>
+                                <label for="214"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__2" value="33" id="214">  Cumplimos totalmente</label>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@ get_header();
                                 <label for="221"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="8.3333" id="221">  No lo cumplimos</label>
                                 <label for="222"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="16.666" id="222">  Cumplimos parcialmente</label>
                                 <label for="223"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="25" id="223">  Cumplimos mayoritariamente</label>
-                                <label for="224"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="33.333" id="224">  Cumplimos totalmente</label>
+                                <label for="224"><input class="uk-radio" type="radio" name="ecosistema-cooperativo__3" value="33" id="224">  Cumplimos totalmente</label>
                             </div>
                         </div>
                     </div>
@@ -712,24 +712,30 @@ get_header();
                 <div id="ver-resultado" class="uk-margin">
                     <div class="bg-light">
                         <div class="uk-container">
-                            <div class="row">
-                                <div class=""><p class="uk-h2">Resultado</p></div>
+                            <div class="row uk-margin">
+                                <h2>Resultado</h2>
                             </div>
                             <div class="uk-margin">
-                                <div id="result" class="chart-container" style="position: relative; width:80vw">
+                                <div id="result" class="chart-container" style="position: relative; width:100%">
                                     <canvas id="chart"></canvas>
                                 </div>
                             </div>
-                            <div class="h3 result-text">
+                            <hr class="uk-divider-icon">
+                            <div class="h3 result-text uk-margin-medium-top">
                                 Tu cooperativa se destaca en <span class="max uk-text-primary uk-text-bold"></span>.
-                                <p>Para acceder a una evaluación más completa y participar del Modelo de Gestión Cooperativa <a href="/contacto" class="cta uk-border-pill uk-button uk-button-small uk-text-light uk-text-bolder uk-button-primary uk-padding-small">completá el formulario</a></p>
+                            </div>
+                            <div class="h3 result-text uk-margin-medium-top">
+                                Los ejes en los que podrían fortalecerse para lograr un mejor desempeño son <span class="min uk-text-primary uk-text-bold"></span>.
+                            </div>
+                            <div class="uk-card uk-card-default uk-card-body uk-margin-medium-top">
+                                <p>Para acceder a una evaluación más completa y participar del Modelo de Gestión Cooperativa <a href="/contacto" class="cta uk-text-bold" style="text-decoration: underline">completá el formulario</a>.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="cursos-sugeridos" class="uk-section listado no-container">
+        <section id="cursos-sugeridos" class="uk-section page">
             <div class="uk-container-expand"></div>
         </section>
 	</main><!-- #main -->
