@@ -32,7 +32,7 @@ $badge-hover-color:                              $global-inverse-color !default;
 .uk-badge {
     box-sizing: border-box;
     min-width: $badge-size;
-    height: $badge-size;
+    min-height: $badge-size;
     padding: $badge-padding-vertical $badge-padding-horizontal;
     border-radius: $badge-border-radius;
     vertical-align: middle;

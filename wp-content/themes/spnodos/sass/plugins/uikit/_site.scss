@@ -20,7 +20,6 @@ $global-xsmall-font-size: 0.8125rem !default; // 13px
 
 // 4. Import UIkit.
 @import "uikit-theme.scss";
-
 .badge-lg {
     padding: 0.85em 1.375em;
 }
@@ -33,15 +32,19 @@ $global-xsmall-font-size: 0.8125rem !default; // 13px
         background-color: darken(#28d5e0, 5%);
     }
 }
-ul.custom-list li:before {
-    content: "";
-    background: url('./assets/img/bullet.png');
-    line-height: 1em;
-    width: .8em;
-    height: .8em;
-    float: left;
-    margin: 0.4em 0.5em 0 0;
-    background-size: cover;
+ul.custom-list {
+    padding-left:30px;     
+    li:before {
+        content: "";
+        background: url('./assets/img/bullet.png');
+        line-height: 1em;
+        width: .8em;
+        height: .8em;
+        position:absolute;
+        margin: 0.4em 0.5em 0 0;
+        background-size: cover;
+        left:0;
+    }
 }
 span.resaltador.azul {
     color: #f1f1f1;
@@ -240,17 +243,19 @@ section#home-step-4 {
     }
 }
 // Section Listados
-section#listado ul,
-section#cursos-sugeridos ul {
-    li {
-        .card-image-wrapper {
-            height: 200px;
-        }
-        .uk-card-title {
-            font-size: 1rem;
-        }
-        .card-body {
-            padding: 30px 30px 30px 15px;
+section#listado  {
+    padding-top:0; 
+    ul {
+        li {
+            .card-image-wrapper {
+                height: 200px;
+            }
+            .uk-card-title {
+                font-size: 1rem;
+            }
+            .card-body {
+                padding: 30px 30px 30px 15px;
+            }
         }
     }
 }
@@ -260,23 +265,25 @@ section#cursos-sugeridos ul {
     color: #FFF!important;
 }
 .page.uk-section {
-    padding-left:180px;
+    padding-left:0;
     padding-bottom:0;
     margin-bottom:0;
     .layout {
+        padding-left:15px;
+        padding-right: 15px;
         p, figure {
-            width: 66%;
+            width: 100%;
             font-weight: 300;
         }
         h1, h2, h3, h4, h5, h6 {
-            width: 66%;
+            width: 100%;
             font-weight: 700;
         }
         .uk-list {
             padding-left:30px;
         }
         .is-style-is-wide {
-            width: calc(100% + 40px);
+            width: calc(100% + 115px);
             margin-left: -40px;
             margin-top: 40px;
             margin-bottom: 20px;
@@ -309,6 +316,8 @@ section#cursos-sugeridos ul {
             margin-top: 4rem;
             padding-top: 4rem;
             padding-bottom: 4rem;
+            margin-right: -75px;
+            padding-right: 75px;
             blockquote {
                 margin-left:0;
                 padding-left:180px;
@@ -343,6 +352,9 @@ section#cursos-sugeridos ul {
             margin-top:0;
             padding-bottom: 0;
             padding-top:0;
+            blockquote p {
+                width:100%;
+            }
         }
         .wp-block-embed {
             .wp-block-embed__wrapper {
@@ -411,6 +423,21 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
             padding-left: 140px!important;
         }
     }
+    .page.uk-section {
+        padding-left:0;
+        padding-bottom:0;
+        margin-bottom:0;
+        .layout {
+            padding-left: 140px;
+            padding-right: 75px;
+            p, figure {
+                font-weight: 300;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                font-weight: 700;
+            }
+        }
+    }
     section#hero .hero-inner {
         padding-left: 140px;
         padding-right: 75px;
@@ -437,6 +464,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     
     section#listado,
     section#cursos-sugeridos {
+        padding-top:40px;
         ul {
             li {
                 .card-image-wrapper {
@@ -472,6 +500,14 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     }
     .menu-wrap .uk-logo {
         text-align: left;
+    }
+    .page.uk-section {
+        padding-left: 180px;
+    }
+    .page.uk-section {
+        .layout {
+            padding-left: 0px;
+        }
     }
     /*.menu-wrap .uk-logo {
         left: 10px;
@@ -539,6 +575,13 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     }
     section#hero .hero-inner .hero-title {
         font-size: 74px;
+    }
+    .page.uk-section {
+        .layout {
+            p, blockquote {
+                width:66%;
+            }
+        }
     }
     
 }

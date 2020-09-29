@@ -330,7 +330,7 @@ get_header();
                             <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-04-gestion-comercial.png"><span class="azul">Gestión económica-financiera</span></div>
                             <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
                                 <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                <div>17. Posee un sistema para el <strong>seguimiento de la posición financiera integral</strong> de la cooperativa (posición de cereales / posición financiera / posición stock / posición USD)</div>
+                                <div>Posee un sistema para el <strong>seguimiento de la posición financiera integral</strong> de la cooperativa (posición de cereales / posición financiera / posición stock / posición USD)</div>
                                 </div>
                             </div>
                             <div class="uk-margin question__options">

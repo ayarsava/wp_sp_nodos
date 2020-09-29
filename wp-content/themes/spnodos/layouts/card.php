@@ -26,7 +26,7 @@
     echo '<p class="uk-visible@s">'. wp_trim_words(get_the_content(), 25) .'</p>';
     echo '';
     foreach($categories as $category) {
-    echo '<span class="uk-badge badge-lg badge-soft-info uk-border-pill uk-text-bold" style="margin:0 .5rem .5rem 0;">' . $category->name . '</span>';
+    echo '<span class="uk-badge badge-sm badge-soft-info uk-border-pill uk-text-bold" style="padding: 5px 10px; margin:0 .5rem .5rem 0;">' . $category->name . '</span>';
     }
     echo '</div>';
     echo '</li>';

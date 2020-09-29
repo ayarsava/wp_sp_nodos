@@ -1230,7 +1230,6 @@ blockquote {
   font-size: 1.25rem;
   line-height: 1.5;
   font-style: italic;
-  color: #333;
 }
 
 /* Add margin if adjacent element */
@@ -4304,7 +4303,7 @@ select.uk-form-width-xsmall {
 .uk-badge {
   box-sizing: border-box;
   min-width: 22px;
-  height: 22px;
+  min-height: 22px;
   padding: 0 5px;
   border-radius: 500px;
   vertical-align: middle;
@@ -12801,15 +12800,19 @@ h3 {
   background-color: #1ec6d0;
 }
 
+ul.custom-list {
+  padding-left: 30px;
+}
 ul.custom-list li:before {
   content: "";
   background: url("./assets/img/bullet.png");
   line-height: 1em;
   width: 0.8em;
   height: 0.8em;
-  float: left;
+  position: absolute;
   margin: 0.4em 0.5em 0 0;
   background-size: cover;
+  left: 0;
 }
 
 span.resaltador.azul {
@@ -13000,16 +13003,16 @@ section#home-step-4 .icon-list .line {
   top: 20px;
 }
 
-section#listado ul li .card-image-wrapper,
-section#cursos-sugeridos ul li .card-image-wrapper {
+section#listado {
+  padding-top: 0;
+}
+section#listado ul li .card-image-wrapper {
   height: 200px;
 }
-section#listado ul li .uk-card-title,
-section#cursos-sugeridos ul li .uk-card-title {
+section#listado ul li .uk-card-title {
   font-size: 1rem;
 }
-section#listado ul li .card-body,
-section#cursos-sugeridos ul li .card-body {
+section#listado ul li .card-body {
   padding: 30px 30px 30px 15px;
 }
 
@@ -13019,23 +13022,27 @@ section#cursos-sugeridos ul li .card-body {
 }
 
 .page.uk-section {
-  padding-left: 180px;
+  padding-left: 0;
   padding-bottom: 0;
   margin-bottom: 0;
 }
+.page.uk-section .layout {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .page.uk-section .layout p, .page.uk-section .layout figure {
-  width: 66%;
+  width: 100%;
   font-weight: 300;
 }
 .page.uk-section .layout h1, .page.uk-section .layout h2, .page.uk-section .layout h3, .page.uk-section .layout h4, .page.uk-section .layout h5, .page.uk-section .layout h6 {
-  width: 66%;
+  width: 100%;
   font-weight: 700;
 }
 .page.uk-section .layout .uk-list {
   padding-left: 30px;
 }
 .page.uk-section .layout .is-style-is-wide {
-  width: calc(100% + 40px);
+  width: calc(100% + 115px);
   margin-left: -40px;
   margin-top: 40px;
   margin-bottom: 20px;
@@ -13068,6 +13075,8 @@ section#cursos-sugeridos ul li .card-body {
   margin-top: 4rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  margin-right: -75px;
+  padding-right: 75px;
 }
 .page.uk-section .layout .ancho-completo blockquote {
   margin-left: 0;
@@ -13102,6 +13111,9 @@ section#cursos-sugeridos ul li .card-body {
   margin-top: 0;
   padding-bottom: 0;
   padding-top: 0;
+}
+.page.uk-section .layout figure.wp-block-pullquote blockquote p {
+  width: 100%;
 }
 .page.uk-section .layout .wp-block-embed .wp-block-embed__wrapper {
   position: relative;
@@ -13166,6 +13178,22 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
     padding-left: 140px !important;
   }
 
+  .page.uk-section {
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .page.uk-section .layout {
+    padding-left: 140px;
+    padding-right: 75px;
+  }
+  .page.uk-section .layout p, .page.uk-section .layout figure {
+    font-weight: 300;
+  }
+  .page.uk-section .layout h1, .page.uk-section .layout h2, .page.uk-section .layout h3, .page.uk-section .layout h4, .page.uk-section .layout h5, .page.uk-section .layout h6 {
+    font-weight: 700;
+  }
+
   section#hero .hero-inner {
     padding-left: 140px;
     padding-right: 75px;
@@ -13185,6 +13213,10 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
     max-width: calc(100% + 90px);
   }
 
+  section#listado,
+section#cursos-sugeridos {
+    padding-top: 40px;
+  }
   section#listado ul li .card-image-wrapper,
 section#cursos-sugeridos ul li .card-image-wrapper {
     height: 300px;
@@ -13220,6 +13252,14 @@ section#cursos-sugeridos ul li .uk-card-title {
 
   .menu-wrap .uk-logo {
     text-align: left;
+  }
+
+  .page.uk-section {
+    padding-left: 180px;
+  }
+
+  .page.uk-section .layout {
+    padding-left: 0px;
   }
 
   /*.menu-wrap .uk-logo {
@@ -13279,6 +13319,10 @@ section#cursos-sugeridos ul li .uk-card-title {
 
   section#hero .hero-inner .hero-title {
     font-size: 74px;
+  }
+
+  .page.uk-section .layout p, .page.uk-section .layout blockquote {
+    width: 66%;
   }
 }
 /* Large screen and bigger */
