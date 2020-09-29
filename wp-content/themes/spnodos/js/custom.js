@@ -1,4 +1,6 @@
 var autoEvaluacion = function() {
+
+  
     var val = {};
     var min = [];
     var max = [];
@@ -39,7 +41,7 @@ var autoEvaluacion = function() {
 
     var current = 1;
     var flag = true;
-    var totalpreguntas = 38;
+    var totalpreguntas = 27;
 
     // LABELS
     var labels = ["GOBIERNO COOPERATIVO", "ECOSISTEMA COOPERATIVO","ESTRATEGIA E INNOVACIÓN","GESTIÓN DEL PRODUCTOR/COMERCIAL","RECURSOS HUMANOS","GESTIÓN ECONÓMICA-FINANCIERA","MEJORA DE PROCESOS","GESTIÓN AMBIENTAL","DESARROLLO DE COMUNIDADES"];
@@ -61,11 +63,21 @@ var autoEvaluacion = function() {
       });
       $('.progress-number span.actual').text(current);
       $('.progress-number span.maximo').text(totalpreguntas);
+      
       $('input:radio').click(function() {
           if (flag) {
+          
+            function getSecondPart(str) {
+              return str.split('__')[1];
+            }
+
             var radio = $(this);
             var name = radio.attr("name");
+            if (getSecondPart(name).length < 2) {
             name = name.substring(0, name.length - 3);
+            } else  {
+            name = name.substring(0, name.length - 4);
+            }
             var value = radio.val();
             // El número de respuesta (de 1 a 5)
             //var respuesta_numero = radio.attr("id") - 5 * (current - 1);

@@ -154,7 +154,7 @@ function spnodos_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	if( is_page( 'autoevaluacion' ) ){
+	if( is_page( array('autoevaluacion' , 'test') ) ){
         wp_enqueue_script( 'jquery3', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), _S_VERSION, true );
 		wp_enqueue_script( 'chartjs', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js', array(), _S_VERSION, true  );
 		wp_enqueue_script( 'my_js', get_theme_file_uri( 'js/custom.js'), array(), _S_VERSION, true );
@@ -274,25 +274,4 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * Register Custom Block Styles
- */
-if ( function_exists( 'register_block_style' ) ) {
-    function block_styles_register_block_styles() {
-        /**
-         * Register block style
-         */
-        register_block_style(
-            'core/image',
-            array(
-                'name'         => 'is-wide',
-                'label'        => 'Ancho completo',
-                'style_handle' => 'block-styles-stylesheet',
-            )
-        );
-    }
-
-    add_action( 'init', 'block_styles_register_block_styles' );
 }
