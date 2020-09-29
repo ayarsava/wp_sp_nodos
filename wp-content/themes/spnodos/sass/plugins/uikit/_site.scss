@@ -281,6 +281,7 @@ section#listado  {
         }
         .uk-list {
             padding-left:30px;
+            position: relative;
         }
         .is-style-is-wide {
             width: calc(100% + 115px);
@@ -578,7 +579,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     }
     .page.uk-section {
         .layout {
-            p, blockquote {
+            p, figure {
                 width:66%;
             }
         }

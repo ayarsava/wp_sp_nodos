@@ -21,7 +21,7 @@
 		if ( ! empty( $categories ) ) {
 			echo '<div class="categorias">';
 			foreach( $categories as $category ) {
-				$output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="uk-badge badge-lg badge-soft-info uk-border-pill uk-text-bold">' . esc_html( $category->name ) . '</a>' . $separator;
+				$output .= '<a href="#" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="uk-badge badge-lg badge-soft-info uk-border-pill uk-text-bold">' . esc_html( $category->name ) . '</a>' . $separator;
 			}
 			echo trim( $output, $separator );
 			echo '</div>';

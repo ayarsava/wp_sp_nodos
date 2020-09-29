@@ -13040,6 +13040,7 @@ section#listado ul li .card-body {
 }
 .page.uk-section .layout .uk-list {
   padding-left: 30px;
+  position: relative;
 }
 .page.uk-section .layout .is-style-is-wide {
   width: calc(100% + 115px);
@@ -13321,7 +13322,7 @@ section#cursos-sugeridos ul li .uk-card-title {
     font-size: 74px;
   }
 
-  .page.uk-section .layout p, .page.uk-section .layout blockquote {
+  .page.uk-section .layout p, .page.uk-section .layout figure {
     width: 66%;
   }
 }
