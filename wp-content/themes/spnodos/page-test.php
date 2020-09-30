@@ -47,45 +47,9 @@ get_header();
                 </div>
 
                 <!--Preguntas-->
-                <form method='POST' action='result.html' id='questions'>
-
+                <form method='POST' action='' id='questions'>
                     <?php wp_autoevaluacion();?>
-                    <!--<div class="question pt-5" id="question37">
-                        <div class="row">
-                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
-                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                <div>Las <strong>actividades realizadas en la comunidad y sus impactos</strong> se miden,  tienen objetivos definidos y mejoraron en los últimos 3 años</div>
-                                </div>
-                            </div>
-                            <div class="uk-margin question__options">
-                                <label for="921"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="6.25" id="921">  No lo cumplimos</label>
-                                <label for="922"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="12.5" id="922">  Cumplimos parcialmente</label>
-                                <label for="923"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="18.75" id="923">  Cumplimos mayoritariamente</label>
-                                <label for="924"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__3" value="25" id="924">  Cumplimos totalmente</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="question pt-5" id="question38">
-                        <div class="row">
-                            <div class="rubro uk-text-bold"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-09-comunidades.png"><span class="azul">Desarrollo de comunidades</span></div>
-                            <div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">
-                                <div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">
-                                <div>Los niveles de Participación del <strong>Grupo de Juventudes</strong> se miden, tienen objetivos definidos y mejoraron en los últimos 3 años</div>
-                                </div>
-                            </div>
-                            <div class="uk-margin question__options">
-                                <label for="931"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="6.25" id="931">  No lo cumplimos</label>
-                                <label for="932"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="12.5" id="932">  Cumplimos parcialmente</label>
-                                <label for="933"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="18.75" id="933">  Cumplimos mayoritariamente</label>
-                                <label for="934"><input class="uk-radio" type="radio" name="desarrollo-de-comunidades__4" value="25" id="934">  Cumplimos totalmente</label>
-                            </div>
-                        </div>
-                    </div>-->
-                            
                     <input type='hidden' name='resultado[]' id="resultado" value=''>
-
                 </form>
 
                 <!--Resultados-->
@@ -115,7 +79,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <section id="cursos-sugeridos" class="uk-section page">
+        <section id="cursos-sugeridos" class="uk-section page uk-margin-large-bottom">
             <div class="uk-container-expand"></div>
         </section>
 	</main><!-- #main -->

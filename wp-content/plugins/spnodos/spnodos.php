@@ -114,9 +114,11 @@ add_action( 'init', 'wpdocs_codex_autoevaluacion_init' );
 
 /*** AGENDA ***/
 function wp_autoevaluacion() {
+    
 	$args = array(
 		'post_type'             => 'pregunta',
-		'posts_per_page'        => -1,
+        'posts_per_page'        => -1,
+        //'cat'                   => array(2),
 		'orderby'               => array( 
 			//'destacado_clause'  => 'DESC',
 			//'fecha_clause'      => 'ASC',
@@ -126,46 +128,95 @@ function wp_autoevaluacion() {
 	// The Query
 	$query_autoevaluacion = new WP_Query( $args );
 	
-	if ( $query_autoevaluacion->have_posts() ) { 
+	if ( $query_autoevaluacion->have_posts() ) :
 	  	echo '<div class="slick autoevaluacion slider-nav">';
 	  	/* Start the Loop */
 		$count = 1;
 		$question_codigo = 0;
         $label_codigo = 100;
-		while ( $query_autoevaluacion->have_posts() ) : $query_autoevaluacion->the_post();
-        
-        $terms = get_the_terms( $post->ID , 'category' );
-        
 
-        $categories = get_the_category();
-        $cat_count = $categories[0];
-        $post_per_category = $cat_count->count;
-        $valor1 = 25 / $post_per_category;
-        $valor2 = 50 / $post_per_category;
-        $valor3 = 75 / $post_per_category;
-        $valor4 = 100 / $post_per_category;
+        $categories = get_categories( $args );
 
-        echo '<!--1. '.$categories[0]->name.'-->';
-		echo '<div class="question pt-5" id="question'.++$question_codigo.'">';
-			echo '<div class="row">';
-				echo '<div class="rubro uk-text-bold"><img class="icon" src="'.get_template_directory_uri().'/assets/img/icon-01-gobierno.png"><span class="azul">'.$categories[0]->name.'</span></div>';
-				echo '<div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">';
-				echo '<div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">';
-					echo '<div>'. get_the_content().'</div>';
-				echo '</div>';
-			echo '</div>';
-			echo '<div class="uk-margin question__options">';
-				echo '<label for="'.++$label_codigo.'"><input class="uk-radio" type="radio" name="'.$categories[0]->slug.'__'.$question_codigo.'" value="'.$valor1.'" id="'.$label_codigo.'">  No lo cumplimos</label>';
-				echo '<label for="'.++$label_codigo.'"><input class="uk-radio" type="radio" name="'.$categories[0]->slug.'__'.$question_codigo.'" value="'.$valor2.'" id="'.$label_codigo.'">  Cumplimos parcialmente</label>';
-				echo '<label for="'.++$label_codigo.'"><input class="uk-radio" type="radio" name="'.$categories[0]->slug.'__'.$question_codigo.'" value="'.$valor3.'" id="'.$label_codigo.'">  Cumplimos mayoritariamente</label>';
-				echo '<label for="'.++$label_codigo.'"><input class="uk-radio" type="radio" name="'.$categories[0]->slug.'__'.$question_codigo.'" value="'.$valor4.'" id="'.$label_codigo.'">  Cumplimos totalmente</label>';
-				echo '</div>';
-			echo '</div>';
-		echo '</div>';
-  
-	  endwhile;
-	  echo '</div>';
-	} else {
-	  get_template_part( 'template-parts/content', 'none' );    
-	}
+        
+        ?>
+        <script>
+        totalpreguntas = "<?php echo $query_autoevaluacion->post_count; ?>";
+        var val = {};
+        var min = [];
+        var max = [];
+        var names = {};
+        var maximo = {};
+        <?php
+
+            foreach ( $categories as $category ) {
+                echo "val['" . $category->slug . "'] = 0;";
+            };
+            foreach ( $categories as $category ) {
+                echo "names['" . $category->slug ."'] = '". $category->name ."';";
+            }; 
+            foreach ( $categories as $category ) {
+                echo "maximo['" . $category->slug ."'] = 100;";
+            }; 
+        
+        
+        $catList = '';
+        foreach ( $categories as $category ) {
+            if(!empty($catList)) {
+                $catList .= ', ';
+            }
+            $catList .= '"'.strtoupper($category->cat_name).'"';
+        }
+        ?>
+        var labels= [<?php echo $catList; ?>];
+        <?php
+        $maxList = '';
+        foreach ( $categories as $category ) {
+            if(!empty($maxList)) {
+                $maxList .= ', ';
+            }
+            $maxList .= 100;
+        }
+        ?>
+        var value_def= [<?php echo $maxList; ?>];
+        
+        </script>
+        <?php
+        while ( $query_autoevaluacion->have_posts() ) : $query_autoevaluacion->the_post();
+            
+            $categories = get_the_category();
+            $cat_count = $categories[0];
+
+            $posts = get_posts('post_type=pregunta&category='.$categories[0]->term_id.''); 
+            $count = count($posts); 
+           
+            $post_per_category = $count;
+            $valor1 = 25 / $post_per_category;
+            $valor2 = 50 / $post_per_category;
+            $valor3 = 75 / $post_per_category;
+            $valor4 = 100 / $post_per_category;
+
+            echo '<!--1. '.$categories[0]->name.'-->';
+            echo '<div class="question pt-5" id="question'.++$question_codigo.'">';
+                echo '<div class="row">';
+                    echo '<div class="rubro uk-text-bold"><img class="icon" src="';
+                    echo z_taxonomy_image_url($categories[0]->term_id);
+                    echo '"><span class="azul">'.$categories[0]->name.'</span></div>';
+                    echo '<div class="uk-margin question__phrase uk-card uk-card-default uk-padding-small">';
+                    echo '<div class="h4 uk-width-4-5@s uk-flex uk-flex-middle">';
+                        echo '<div>'. get_the_content().'</div>';
+                    echo '</div>';
+                echo '</div>';
+                echo '<div class="uk-margin question__options">';
+                    echo '<label for="'.++$label_codigo.'"><input class="uk-radio" type="radio" name="'.$categories[0]->slug.'__'.$question_codigo.'" value="'.$valor1.'" id="'.$label_codigo.'">  No lo cumplimos</label>';
+                    echo '<label for="'.++$label_codigo.'"><input class="uk-radio" type="radio" name="'.$categories[0]->slug.'__'.$question_codigo.'" value="'.$valor2.'" id="'.$label_codigo.'">  Cumplimos parcialmente</label>';
+                    echo '<label for="'.++$label_codigo.'"><input class="uk-radio" type="radio" name="'.$categories[0]->slug.'__'.$question_codigo.'" value="'.$valor3.'" id="'.$label_codigo.'">  Cumplimos mayoritariamente</label>';
+                    echo '<label for="'.++$label_codigo.'"><input class="uk-radio" type="radio" name="'.$categories[0]->slug.'__'.$question_codigo.'" value="'.$valor4.'" id="'.$label_codigo.'">  Cumplimos totalmente</label>';
+                    echo '</div>';
+                echo '</div>';
+            echo '</div>';
+    
+        endwhile;
+        echo '</div>';
+    endif;
+    wp_reset_postdata();
 }

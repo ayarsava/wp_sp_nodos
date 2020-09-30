@@ -1,6 +1,6 @@
 var autoEvaluacion = function() {
 
-  
+  /*
     var val = {};
     var min = [];
     var max = [];
@@ -35,19 +35,18 @@ var autoEvaluacion = function() {
     maximo['gestion-economica-financiera'] = 100;
     maximo['mejora-de-procesos'] = 100;
     maximo['gestion-ambiental'] = 100;
-    maximo['desarrollo-de-comunidades'] = 100;
+    maximo['desarrollo-de-comunidades'] = 100;*/
 
     
-
     var current = 1;
     var flag = true;
-    var totalpreguntas = 27;
+    //var totalpreguntas = 27;
 
     // LABELS
-    var labels = ["GOBIERNO COOPERATIVO", "ECOSISTEMA COOPERATIVO","ESTRATEGIA E INNOVACIÓN","GESTIÓN DEL PRODUCTOR/COMERCIAL","RECURSOS HUMANOS","GESTIÓN ECONÓMICA-FINANCIERA","MEJORA DE PROCESOS","GESTIÓN AMBIENTAL","DESARROLLO DE COMUNIDADES"];
+    /*var labels = ["GOBIERNO COOPERATIVO", "ECOSISTEMA COOPERATIVO","ESTRATEGIA E INNOVACIÓN","GESTIÓN DEL PRODUCTOR/COMERCIAL","RECURSOS HUMANOS","GESTIÓN ECONÓMICA-FINANCIERA","MEJORA DE PROCESOS","GESTIÓN AMBIENTAL","DESARROLLO DE COMUNIDADES"];*/
 
     // DATA PROMEDIO
-    var value_def = [100,100,100,100,100,100,100,100,100];
+    /*var value_def = [100,100,100,100,100,100,100,100,100];*/
     var respuestas = [];
 
     $(document).ready(function(){
@@ -203,12 +202,10 @@ var autoEvaluacion = function() {
     function makeGraph(argument) {
 
       var data = [];
-
-      
       
       $.each(val, function( index, value ) {
         var valor_maximo = maximo[index];
-        var valor_porcentual = parseInt( 100 * value / valor_maximo);
+        var valor_porcentual = Math.ceil( 100 * value / valor_maximo);
         data.push(valor_porcentual);
         console.log('Valor máximo de ' + index + ': ' + valor_maximo);
         console.log('Value: ' + value);
