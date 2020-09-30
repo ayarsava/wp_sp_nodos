@@ -118,11 +118,6 @@ function wp_autoevaluacion() {
 	$args = array(
 		'post_type'             => 'pregunta',
         'posts_per_page'        => -1,
-        //'cat'                   => array(2),
-		'orderby'               => array( 
-			//'destacado_clause'  => 'DESC',
-			//'fecha_clause'      => 'ASC',
-		),
 	);
   
 	// The Query
@@ -136,8 +131,6 @@ function wp_autoevaluacion() {
         $label_codigo = 100;
 
         $categories = get_categories( $args );
-
-        
         ?>
         <script>
         totalpreguntas = "<?php echo $query_autoevaluacion->post_count; ?>";
@@ -172,7 +165,7 @@ function wp_autoevaluacion() {
         $maxList = '';
         foreach ( $categories as $category ) {
             if(!empty($maxList)) {
-                $maxList .= ', ';
+                $maxList .= ',';
             }
             $maxList .= 100;
         }
