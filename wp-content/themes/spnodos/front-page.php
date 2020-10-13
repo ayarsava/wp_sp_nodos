@@ -107,6 +107,7 @@ get_header();
         </div>
     </div>
 </section>
+
 <div class="uk-text-center uk-grid-small uk-margin-large">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/divider.png" width="350">
 </div>
@@ -156,41 +157,6 @@ get_header();
         </div>
     </div>
 </section>
-
-
-<!--LISTADO   
-<section id="listado" class="uk-section listado no-container">
-    <div class="uk-text-light">
-        <div>
-            <h2 class="uk-margin-medium uk-text-bold">Recursos destacados</h2>
-            <?php
-            
-            $args = array(
-                'post_type' => 'post',
-                'posts_per_page' => 3,
-            );
-            // The Query
-            $the_query = new WP_Query( $args );
-            
-            // The Loop
-            if ( $the_query->have_posts() ) {
-                echo '<ul class="uk-grid-collapse uk-child-width-1-2 uk-child-width-1-3@m uk-text-small" uk-grid uk-height-match="target: > li"  uk-margin>';
-                while ( $the_query->have_posts() ) {
-                    $the_query->the_post();
-
-                    get_template_part('layouts/card');
-                }
-                echo '</ul>';
-            } else {
-                // no posts found
-            }
-            /* Restore original Post Data */
-            wp_reset_postdata();
-            ?>
-        </div>
-
-    </div>
-</section>--> 
 
 <?php
 get_footer();
