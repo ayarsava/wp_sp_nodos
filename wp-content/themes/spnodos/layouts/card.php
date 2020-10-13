@@ -22,11 +22,11 @@
         echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><img src="' . get_template_directory_uri() . '/assets/img/forma-06-mano.png" alt="" style="background-color:#FFF;" uk-cover></a>';
     }
     echo '</div>';
-    echo '<div class="card-body"><h3 class="uk-card-title uk-text-bold"><span class="uk-link-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'. get_the_title() .'</a></span></h3>';
+    echo '<div class="card-body"><h3 class="uk-card-title uk-text-bold uk-margin-right uk-margin-small-top"><span class="uk-link-heading"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'. get_the_title() .'</a></span></h3>';
     echo '<p class="uk-visible@s">'. wp_trim_words(get_the_content(), 25) .'</p>';
     echo '';
     foreach($categories as $category) {
-    echo '<span class="uk-badge badge-sm badge-soft-info uk-border-pill uk-text-bold" style="padding: 5px 10px; margin:0 .5rem .5rem 0;">' . $category->name . '</span>';
+    echo '<span class="uk-badge badge-sm badge-soft-info uk-border-pill uk-text-bold" style="padding: 2px 10px; margin:0px .5rem .2rem 0px;">' . $category->name . '</span>';
     }
     echo '</div>';
     echo '</li>';

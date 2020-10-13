@@ -1,52 +1,7 @@
 var autoEvaluacion = function() {
 
-  /*
-    var val = {};
-    var min = [];
-    var max = [];
-    var names = {};
-    var maximo = {};
-
-    val['gobierno-cooperativo'] = 0;
-    val['ecosistema-cooperativo'] = 0;
-    val['estrategia-e-innovacion'] = 0;
-    val['gestion-del-productor-comercial'] = 0;
-    val['recursos-humanos'] = 0;
-    val['gestion-economica-financiera'] = 0;
-    val['mejora-de-procesos'] = 0;
-    val['gestion-ambiental'] = 0;
-    val['desarrollo-de-comunidades'] = 0;
-
-    names['gobierno-cooperativo'] = 'Gobierno Cooperativo';
-    names['ecosistema-cooperativo'] = 'Ecosistema Cooperativo';
-    names['estrategia-e-innovacion'] = 'Estrategia e innovación';
-    names['gestion-del-productor-comercial'] = 'Gestión del productor/comercial';
-    names['recursos-humanos'] = 'Recursos Humanos';
-    names['gestion-economica-financiera'] = 'Gestión económica-financiera';
-    names['mejora-de-procesos'] = 'Mejora de procesos';
-    names['gestion-ambiental'] = 'Gestión ambiental';
-    names['desarrollo-de-comunidades'] = 'Desarrollo de comunidades';
-
-    maximo['gobierno-cooperativo'] = 100;
-    maximo['ecosistema-cooperativo'] = 100;
-    maximo['estrategia-e-innovacion'] = 100;
-    maximo['gestion-del-productor-comercial'] = 100;
-    maximo['recursos-humanos'] = 100;
-    maximo['gestion-economica-financiera'] = 100;
-    maximo['mejora-de-procesos'] = 100;
-    maximo['gestion-ambiental'] = 100;
-    maximo['desarrollo-de-comunidades'] = 100;*/
-
-    
     var current = 1;
     var flag = true;
-    //var totalpreguntas = 27;
-
-    // LABELS
-    /*var labels = ["GOBIERNO COOPERATIVO", "ECOSISTEMA COOPERATIVO","ESTRATEGIA E INNOVACIÓN","GESTIÓN DEL PRODUCTOR/COMERCIAL","RECURSOS HUMANOS","GESTIÓN ECONÓMICA-FINANCIERA","MEJORA DE PROCESOS","GESTIÓN AMBIENTAL","DESARROLLO DE COMUNIDADES"];*/
-
-    // DATA PROMEDIO
-    /*var value_def = [100,100,100,100,100,100,100,100,100];*/
     var respuestas = [];
 
     $(document).ready(function(){
@@ -78,10 +33,6 @@ var autoEvaluacion = function() {
             name = name.substring(0, name.length - 4);
             }
             var value = radio.val();
-            // El número de respuesta (de 1 a 5)
-            //var respuesta_numero = radio.attr("id") - 5 * (current - 1);
-            //respuestas.push(respuesta_numero);
-            console.log('suma' + value);
             val[name] = val[name] + parseFloat(value);
             radio.parent('label').addClass('choosen');
             flag =  false;
@@ -117,18 +68,13 @@ var autoEvaluacion = function() {
             }, 500);
 
             var progress = current * 100 / totalpreguntas;
-            //$('.progress-bar').css('width', progress + '%');
             $('.progress-number span.actual').text(current +1);
             $('.porcentaje span').text(parseInt(progress));
             $('#resultado').val(JSON.stringify(val));
-            console.log(current);
-            console.log(val);
-
-            
             var bar = document.getElementById('js-progressbar');
             var animate = setTimeout(function () {
                 bar.value = progress;
-                console.log(progress);
+                //console.log(progress);
                 if (bar.value >= bar.max) {
                   clearInterval(animate);
                 }
@@ -139,19 +85,15 @@ var autoEvaluacion = function() {
 
     function bySortedValue(obj, callback, context) {
       var tuples = [];
-
       for (var key in obj) tuples.push([key, obj[key]]);
-
       tuples.sort(function(a, b) {
         return a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0
       });
-
       var length = tuples.length;
       while (length--) callback.call(context, tuples[length][0], tuples[length][1]);
     }
 
     function results(val) {
-        console.log(val);
         $.ajax({
           type: "post",
           url: ajax_var.url,
@@ -196,20 +138,15 @@ var autoEvaluacion = function() {
     }
     
     function getPerc(num, percent) {
-          return Number(num) - ((Number(percent) / 100) * Number(num));
+      return Number(num) - ((Number(percent) / 100) * Number(num));
     }
 
     function makeGraph(argument) {
-
       var data = [];
-      
       $.each(val, function( index, value ) {
         var valor_maximo = maximo[index];
         var valor_porcentual = Math.ceil( 100 * value / valor_maximo);
         data.push(valor_porcentual);
-        console.log('Valor máximo de ' + index + ': ' + valor_maximo);
-        console.log('Value: ' + value);
-        console.log('Valor porcentual: ' + valor_porcentual);
       })
         
       var options = {
@@ -259,7 +196,8 @@ var autoEvaluacion = function() {
 }
 
 jQuery(function($){
-if ($('#test').length) {
+  if ($('#test').length) {
     autoEvaluacion();
-}});
+  }
+});
 
