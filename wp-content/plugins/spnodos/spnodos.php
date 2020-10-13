@@ -118,6 +118,7 @@ function wp_autoevaluacion() {
 	$args = array(
 		'post_type'             => 'pregunta',
         'posts_per_page'        => -1,
+        'order'                 => 'ASC'
 	);
   
 	// The Query

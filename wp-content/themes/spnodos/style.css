@@ -13071,7 +13071,8 @@ section#listado ul li .card-body {
   transition: 0.1s ease-in-out;
   transition-property: color, background-color, border-color;
 }
-.page.uk-section .layout .ancho-completo {
+.page.uk-section .layout .ancho-completo,
+.page.uk-section .layout .alignfull {
   margin-left: -180px;
   margin-top: 4rem;
   padding-top: 4rem;
@@ -13079,7 +13080,8 @@ section#listado ul li .card-body {
   margin-right: -75px;
   padding-right: 75px;
 }
-.page.uk-section .layout .ancho-completo blockquote {
+.page.uk-section .layout .ancho-completo blockquote,
+.page.uk-section .layout .alignfull blockquote {
   margin-left: 0;
   padding-left: 180px;
   padding-bottom: 0;
@@ -13088,20 +13090,24 @@ section#listado ul li .card-body {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.page.uk-section .layout .ancho-completo blockquote p {
+.page.uk-section .layout .ancho-completo blockquote p,
+.page.uk-section .layout .alignfull blockquote p {
   max-width: 100%;
   font-size: inherit;
   font-weight: 400;
   line-height: 1.5;
 }
-.page.uk-section .layout .ancho-completo blockquote cite {
+.page.uk-section .layout .ancho-completo blockquote cite,
+.page.uk-section .layout .alignfull blockquote cite {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
 }
-.page.uk-section .layout .ancho-completo blockquote cite a {
+.page.uk-section .layout .ancho-completo blockquote cite a,
+.page.uk-section .layout .alignfull blockquote cite a {
   color: #FFF;
 }
-.page.uk-section .layout .ancho-completo blockquote cite:before {
+.page.uk-section .layout .ancho-completo blockquote cite:before,
+.page.uk-section .layout .alignfull blockquote cite:before {
   content: "— ";
 }
 .page.uk-section .layout .has-vivid-cyan-blue-background-color {

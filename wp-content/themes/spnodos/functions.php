@@ -239,6 +239,8 @@ function disable_emojis() {
 }
 add_action( 'init', 'disable_emojis' );
 
+add_theme_support('align-wide');
+
 /**
  * Filter out the tinymce emoji plugin.
  */
