@@ -118,7 +118,15 @@ function wp_autoevaluacion() {
 	$args = array(
 		'post_type'             => 'pregunta',
         'posts_per_page'        => -1,
-        'order'                 => 'ASC'
+        'order'                 => 'ASC',
+        'tax_query' => array(
+            array(
+                'taxonomy'  => 'category',
+                'field'     => 'slug',
+                'terms'     => 'uncategorized',
+                'operator'  => 'NOT IN'
+            )
+        )
 	);
   
 	// The Query
