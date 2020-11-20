@@ -112,21 +112,13 @@ function wpdocs_codex_autoevaluacion_init() {
  
 add_action( 'init', 'wpdocs_codex_autoevaluacion_init' );
 
-/*** AGENDA ***/
+/*** AUTOEVALUACION ***/
 function wp_autoevaluacion() {
     
 	$args = array(
 		'post_type'             => 'pregunta',
         'posts_per_page'        => -1,
         'order'                 => 'ASC',
-        'tax_query' => array(
-            array(
-                'taxonomy'  => 'category',
-                'field'     => 'slug',
-                'terms'     => 'uncategorized',
-                'operator'  => 'NOT IN'
-            )
-        )
 	);
   
 	// The Query
@@ -139,7 +131,8 @@ function wp_autoevaluacion() {
 		$question_codigo = 0;
         $label_codigo = 100;
 
-        $categories = get_categories( $args );
+        //$categories = get_categories( $args );
+        $categories = get_terms_by_post_type( array('category'), array('pregunta'));
         ?>
         <script>
         totalpreguntas = "<?php echo $query_autoevaluacion->post_count; ?>";
@@ -166,7 +159,7 @@ function wp_autoevaluacion() {
             if(!empty($catList)) {
                 $catList .= ', ';
             }
-            $catList .= '"'.strtoupper($category->cat_name).'"';
+            $catList .= '"'.strtoupper($category->name).'"';
         }
         ?>
         var labels= [<?php echo $catList; ?>];
