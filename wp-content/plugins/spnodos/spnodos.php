@@ -215,3 +215,19 @@ function wp_autoevaluacion() {
     endif;
     wp_reset_postdata();
 }
+
+
+$new_general_setting = new new_general_setting();
+class new_general_setting {
+    function new_general_setting( ) {
+        add_filter( 'admin_init' , array( &$this , 'register_fields' ) );
+    }
+    function register_fields() {
+        register_setting( 'general', 'featured_video', 'esc_attr' );
+        add_settings_field('feat_video', '<label for="featured_video">'.__('Video principal en Home' , 'featured_video' ).'</label>' , array(&$this, 'fields_html') , 'general' );
+    }
+    function fields_html() {
+        $value = get_option( 'featured_video', '' );
+		echo '<input type="url" name="featured_video" id="featured_video" class="regular-text" value="' . $value . '">';
+    }
+}

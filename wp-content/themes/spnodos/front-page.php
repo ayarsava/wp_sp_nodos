@@ -23,7 +23,7 @@ get_header();
             <p>Recorramos juntos el camino para ser más competitivos y sustentables</p>
         </div>
 
-
+        
         <div class="go-down uk-visible@s uk-flex uk-flex-center uk-flex-middle uk-animation-toggle" tabindex="0">
             <a href="#home-step-1" class="uk-animation-fast uk-animation-slide-top" uk-scroll><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow.svg" uk-svg width="15"></a>
         </div>
@@ -31,8 +31,7 @@ get_header();
 
     <!--Hero Media-->
     <div id="hero-media" style="background-color: #f1f1f1;">
-        <div class="media-wrapper uk-clearfix">
-            <video src="<?php echo get_template_directory_uri(); ?>/assets/videos/muestra.mp4" loop muted playsinline uk-video="autoplay: inview" controls class="media"></video>
+        <div id="featured_video" class="media-wrapper uk-clearfix">
         </div>
     </div>
 </section>
@@ -157,6 +156,28 @@ get_header();
         </div>
     </div>
 </section>
+
+<script>
+jQuery(document).ready(function($){
+
+<?php $splash_video = get_option( 'featured_video' ); ?>
+    var video_id = getId('<?php echo $splash_video;?>');    
+    function getId(url) {
+        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        var match = url.match(regExp);
+
+        if (match && match[2].length == 11) {
+            return match[2];
+        } else {
+            return '';
+        }
+    }
+    if (video_id  != '') {
+    $('#featured_video').html('<iframe src="https://www.youtube-nocookie.com/embed/' + video_id + '?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true" class="media"></iframe>');
+    }
+});
+
+</script>
 
 <?php
 get_footer();
