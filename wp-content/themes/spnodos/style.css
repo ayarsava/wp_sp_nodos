@@ -13175,6 +13175,22 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
   background-color: #0d5fa5;
 }
 
+/* Menu */
+ul.redes {
+  padding-left: 0;
+}
+ul.redes li {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  vertical-align: middle;
+  -webkit-backface-visibility: hidden;
+  margin-bottom: 5px;
+}
+ul.redes li .icon {
+  fill: #0f6cbd !important;
+}
+
 /*** RESPONSIVE ***/
 /* Phone landscape and bigger */
 @media (min-width: 640px) {

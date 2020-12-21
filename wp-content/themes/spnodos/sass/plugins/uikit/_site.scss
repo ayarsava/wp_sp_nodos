@@ -415,6 +415,22 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button {
     }
 }
 
+/* Menu */
+ul.redes {
+    padding-left:0;
+    li {
+        display: inline-block;
+        position: relative;
+        max-width: 100%;
+        vertical-align: middle;
+        -webkit-backface-visibility: hidden;
+        margin-bottom:5px;
+        .icon {
+            fill: $primary!important;
+        }
+    }
+} 
+
 /*** RESPONSIVE ***/
 
 /* Phone landscape and bigger */

@@ -32,12 +32,14 @@
 					?>
 				</div>
 				<div class="uk-width-1-5@s">
-					<div class="uk-list uk-inline uk-text-small redes">
-						<div class="uk-inline"><a href="#" uk-icon="facebook"></a></div>
-						<div class="uk-inline"><a href="#" uk-icon="instagram"></a></div>
-						<div class="uk-inline"><a href="#" uk-icon="twitter"></a></div>
-						<div class="uk-inline"><a href="#" uk-icon="youtube"></a></div>
-					</div>
+					<?php
+						wp_nav_menu(
+							array(
+							'theme_location' => 'smi-social',
+							'menu_class'	 => 'redes',
+							)
+						);
+					?>
 				</div>
 				<div class="uk-width-1-5@s">
 					<address>
@@ -51,5 +53,14 @@
 
 <?php wp_footer(); ?>
 
+<script>
+jQuery(function($){
+	$(document).ready(function(){
+		if($('#redes').length){
+			$('.uk-inline a').attr('uk-icon', 'facebook');
+		}
+	});
+});
+</script>
 </body>
 </html>
